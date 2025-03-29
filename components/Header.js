@@ -1,14 +1,14 @@
 "use client";
 
 import { Button } from "@heroui/react";
-import { ArrowRight } from "lucide-react";
+import NodeVisualizer from "./NodeVisualizer";
 
 export default function Header() {
   return (
-    <section className="py-12 md:py-20 lg:py-28 space-y-12 md:space-y-16 text-black">
+    <section className="py-12 md:py-20 lg:py-28 text-black">
       <div className="container flex flex-col items-center text-center space-y-6 md:space-y-8">
         <div className="inline-block rounded-full bg-[var(--secondary)] px-3 py-1 text-sm">
-          Introducing Deforge
+          Introducing <span className="font-semibold">Deforge</span>
         </div>
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter max-w-3xl">
           Build AI Agents Visually,{" "}
@@ -30,11 +30,11 @@ export default function Header() {
         </div>
       </div>
 
-      {/* <div className="container">
-        <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full rounded-lg border bg-background p-2 md:p-4 shadow-lg overflow-hidden">
+      <div className="container ">
+        <div className="relative h-[300px] sm:h-[400px] w-full rounded-lg bg-background p-2 md:p-4 overflow-hidden">
           <NodeVisualizer />
         </div>
-      </div> */}
+      </div>
     </section>
   );
 }
