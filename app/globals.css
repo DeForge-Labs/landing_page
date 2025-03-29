@@ -7,6 +7,7 @@
   --foreground: #ededed;
   --primary: #fefceaff;
   --secondary: #ebe9d8;
+  --text: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,7 +24,7 @@
 }
 
 body {
-  color: var(--foreground);
+  color: var(--text);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }

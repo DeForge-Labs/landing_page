@@ -5,7 +5,7 @@ import NodeVisualizer from "./NodeVisualizer";
 
 export default function Header() {
   return (
-    <section className="py-12 md:py-20 lg:py-28 text-black">
+    <section className="pt-12 md:pt-20 lg:pt-28  text-black">
       <div className="container flex flex-col items-center text-center space-y-6 md:space-y-8">
         <div className="inline-block rounded-full bg-[var(--secondary)] px-3 py-1 text-sm">
           Introducing <span className="font-semibold">Deforge</span>
