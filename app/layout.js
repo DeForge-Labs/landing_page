@@ -10,7 +10,7 @@ const lexendDeca = Lexend_Deca({
 });
 
 export const metadata = {
-  title: "DeForge.ai",
+  title: "Deforge.io",
   description: "Build AI Agents Visually, No Code Required",
 };
 
