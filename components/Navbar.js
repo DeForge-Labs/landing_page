@@ -1,10 +1,20 @@
 "use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@heroui/react";
 
 export default function Navbar() {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      // Use smooth scrolling behavior
+      window.scrollTo({
+        top: section.offsetTop - 100, // Offset for navbar height
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <header className="container z-40 bg-background text-black">
       <div className="flex h-20 items-center justify-between py-6">
@@ -20,30 +30,30 @@ export default function Navbar() {
           </Link>
           <nav className="hidden gap-3 md:flex">
             <Button
-              href="#features"
               size="sm"
-              className="text-sm  transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
+              className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
+              onClick={() => scrollToSection("features")}
             >
               Features
             </Button>
             <Button
-              href="#use-cases"
               size="sm"
-              className="text-sm  transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
+              className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
+              onClick={() => scrollToSection("use-cases")}
             >
               Use Cases
             </Button>
             <Button
-              href="#how-it-works"
               size="sm"
-              className="text-sm  transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
+              className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
+              onClick={() => scrollToSection("how-it-works")}
             >
               How It Works
             </Button>
             <Button
-              href="#pricing"
               size="sm"
               className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
+              onClick={() => scrollToSection("pricing")}
             >
               Pricing
             </Button>
@@ -51,7 +61,7 @@ export default function Navbar() {
         </div>
         <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-4">
-            <Button size="sm">Coming Soon</Button>
+            <Button size="sm">Join Waitlist</Button>
           </div>
         </div>
       </div>

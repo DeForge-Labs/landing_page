@@ -25,7 +25,7 @@ export default function Header() {
             className="gap-2 border border-[black]"
             variant="outline"
           >
-            Coming Soon
+            Join Waitlist
           </Button>
         </div>
       </div>

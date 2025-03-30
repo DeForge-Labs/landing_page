@@ -3,6 +3,9 @@ import Navbar from "@/components/Navbar";
 import Features from "@/components/Features";
 import UseCases from "@/components/Usecase";
 import HowItWorks from "@/components/HowItWorks";
+import Build from "@/components/Build";
+import PricingSection from "@/components/Pricing";
+import CTA from "@/components/CTA";
 
 export default function Home() {
   return (
@@ -13,6 +16,9 @@ export default function Home() {
         <Features />
         <UseCases />
         <HowItWorks />
+        <Build />
+        <PricingSection />
+        <CTA />
       </main>
     </div>
   );
