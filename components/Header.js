@@ -24,6 +24,9 @@ export default function Header() {
             size="lg"
             className="gap-2 border border-[black]"
             variant="outline"
+            onPress={() => {
+              window.open("https://app.youform.com/forms/dgj8cqyw", "_blank");
+            }}
           >
             Join Waitlist
           </Button>

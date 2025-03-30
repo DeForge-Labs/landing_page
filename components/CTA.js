@@ -1,10 +1,12 @@
+"use client";
+
 import { Button } from "@heroui/react";
 import { TextHoverEffect } from "./ui/text-hover-effect";
 
 export default function CTA() {
   return (
     <section className="pt-16 md:pt-20 bg-black text-primary-foreground">
-      <div className="container text-center flex flex-col justify-center items-center relative gap-y-6 pb-56 md:gap-y-8 overflow-hidden">
+      <div className="container text-center flex flex-col justify-center items-center relative gap-y-6 pb-16 md:pb-56 md:gap-y-8 overflow-hidden">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
           Be Among the First to Experience Deforge
         </h2>
@@ -12,11 +14,17 @@ export default function CTA() {
           Join our waitlist today and get early access when we launch. Plus,
           receive exclusive updates on our progress.
         </p>
-        <Button size="lg" className="mt-4 bg-[var(--primary)] text-black w-fit">
+        <Button
+          size="lg"
+          className="mt-4 bg-[var(--primary)] text-black w-fit"
+          onPress={() => {
+            window.open("https://app.youform.com/forms/dgj8cqyw", "_blank");
+          }}
+        >
           Join the Waitlist
         </Button>
 
-        <div className="h-[20rem] flex items-center justify-center absolute -bottom-28">
+        <div className="h-[20rem] md:flex items-center justify-center absolute -bottom-28 hidden">
           <TextHoverEffect text="Deforge" />
         </div>
       </div>
