@@ -1,9 +1,13 @@
 "use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@heroui/react";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
+  const router = useRouter();
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -32,28 +36,55 @@ export default function Navbar() {
             <Button
               size="sm"
               className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
-              onClick={() => scrollToSection("features")}
+              onClick={() => {
+                if (window.location.pathname !== "/") {
+                  router.push("/");
+                }
+                scrollToSection("features");
+              }}
             >
               Features
             </Button>
             <Button
               size="sm"
               className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
-              onClick={() => scrollToSection("use-cases")}
+              onClick={() => {
+                if (window.location.pathname !== "/") {
+                  router.push("/");
+                }
+                scrollToSection("use-cases");
+              }}
             >
               Use Cases
             </Button>
             <Button
               size="sm"
               className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
-              onClick={() => scrollToSection("how-it-works")}
+              onClick={() => {
+                if (window.location.pathname !== "/") {
+                  router.push("/");
+                }
+                scrollToSection("how-it-works");
+              }}
             >
               How It Works
             </Button>
             <Button
               size="sm"
               className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
-              onClick={() => scrollToSection("pricing")}
+              onPress={() => router.push("/blog")}
+            >
+              Blog
+            </Button>
+            <Button
+              size="sm"
+              className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
+              onClick={() => {
+                if (window.location.pathname !== "/") {
+                  router.push("/");
+                }
+                scrollToSection("pricing");
+              }}
             >
               Pricing
             </Button>
