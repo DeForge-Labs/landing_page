@@ -60,14 +60,9 @@ export default function Navbar() {
             <Button
               size="sm"
               className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
-              onClick={() => {
-                if (window.location.pathname !== "/") {
-                  router.push("/");
-                }
-                scrollToSection("how-it-works");
-              }}
+              onPress={() => router.push("/templates")}
             >
-              How It Works
+              Templates
             </Button>
             <Button
               size="sm"
