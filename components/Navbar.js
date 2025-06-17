@@ -48,18 +48,6 @@ export default function Navbar() {
             <Button
               size="sm"
               className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
-              onClick={() => {
-                if (window.location.pathname !== "/") {
-                  router.push("/");
-                }
-                scrollToSection("use-cases");
-              }}
-            >
-              Use Cases
-            </Button>
-            <Button
-              size="sm"
-              className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
               onPress={() => router.push("/templates")}
             >
               Templates
@@ -70,6 +58,15 @@ export default function Navbar() {
               onPress={() => router.push("/blog")}
             >
               Blog
+            </Button>
+            <Button
+              size="sm"
+              className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
+              onPress={() => {
+                window.open("https://docs.deforge.io", "_blank");
+              }}
+            >
+              Docs
             </Button>
             <Button
               size="sm"

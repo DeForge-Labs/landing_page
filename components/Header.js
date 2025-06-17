@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@heroui/react";
-import NodeVisualizer from "./NodeVisualizer";
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -30,12 +30,27 @@ export default function Header() {
           >
             Join Waitlist
           </Button>
+
+          <Button
+            size="lg"
+            className="gap-2 text-background bg-black/80 px-7"
+            onPress={() => {
+              window.open("https://app.deforge.io", "_blank");
+            }}
+          >
+            Launch App
+          </Button>
         </div>
       </div>
 
       <div className="container ">
-        <div className="relative h-[300px] sm:h-[400px] w-full rounded-lg bg-background p-2 md:p-4 overflow-hidden">
-          <NodeVisualizer />
+        <div className="relative w-full xl:h-[700px] lg:h-[600px] sm:h-[400px] h-[300px] rounded-lg xl:mt-3 lg:mt-4 md:mt-2 mt-4 p-2 md:p-4 overflow-hidden">
+          <Image
+            src="/logo/Nodes.jpg"
+            alt="Hero Image"
+            fill
+            className="object-contain"
+          />
         </div>
       </div>
     </section>
