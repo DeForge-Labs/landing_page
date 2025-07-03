@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@heroui/react": "^2.6.14",
+    "@radix-ui/react-dialog": "^1.1.14",
+    "@radix-ui/react-visually-hidden": "^1.2.3",
     "@xyflow/react": "^12.5.1",
     "axios": "^1.9.0",
     "clsx": "^2.1.1",

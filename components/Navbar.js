@@ -86,6 +86,16 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <Button
               size="sm"
+              variant="icon"
+              onPress={() => {
+                window.open("https://x.com/deforge_io", "_blank");
+              }}
+              className="bg-background border-black border text-black min-w-5"
+            >
+              <Image src="/logo/x-logo.png" alt="Logo" width={19} height={19} />
+            </Button>
+            <Button
+              size="sm"
               onPress={() => {
                 window.open("https://app.youform.com/forms/dgj8cqyw", "_blank");
               }}
