@@ -49,7 +49,7 @@ export default function Header() {
             src="/logo/Nodes.jpg"
             alt="Hero Image"
             fill
-            className="object-contain"
+            className="object-contain bg-background"
           />
         </div>
       </div>

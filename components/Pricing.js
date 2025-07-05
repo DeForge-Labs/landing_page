@@ -6,25 +6,20 @@ const plans = [
     name: "Free",
     price: "$0",
     description: "Perfect for beginners and hobbyists",
-    features: [
-      "Up to 3 AI agents",
-      "Basic node components",
-      "1,000 monthly executions",
-      "Community support",
-    ],
+    features: ["Up to 3 AI agents", "500 credits", "Forum support"],
     cta: "Get Started",
     popular: false,
   },
   {
     name: "Pro",
     price: "$29",
-    period: "/month",
+    period: "/month*",
     description: "For professionals and small teams",
     features: [
-      "Unlimited AI agents",
-      "All node components",
-      "50,000 monthly executions",
+      "Up to 20 AI agents",
+      "10,000 credits",
       "Priority support",
+      "Execution Dashboard",
       "Custom branding",
       "API access",
     ],
@@ -33,15 +28,15 @@ const plans = [
   },
   {
     name: "Enterprise",
-    price: "Custom",
+    price: "Contact Us",
     description: "For organizations with advanced needs",
     features: [
-      "Unlimited everything",
-      "Dedicated support",
-      "Custom integrations",
-      "On-premise deployment",
-      "SLA guarantees",
-      "Team collaboration",
+      "Unlimited AI agents",
+      "Unlimited credits",
+      "Priority support",
+      "Execution Dashboard",
+      "Custom branding",
+      "API access",
     ],
     cta: "Contact Sales",
     popular: false,
@@ -106,7 +101,7 @@ export default function PricingSection() {
 
       <div className="mt-16 text-center">
         <p className="text-muted-foreground">
-          All plans will include a 14-day free trial. No credit card required.
+          *Plans are subject to change. Stay tuned for more updates.
         </p>
       </div>
     </div>
