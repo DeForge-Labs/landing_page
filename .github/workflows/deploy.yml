@@ -29,7 +29,7 @@ jobs:
           ssh -p ${{ secrets.VPS_PORT }} -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa "${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }}" bash -c "'
               set -eo pipefail
 
-              cd app
+              cd deforge/landing_page
               git pull
               npm install
               npm run build
