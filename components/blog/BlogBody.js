@@ -8,30 +8,34 @@ import MarkdownRenderer from "./markdownRenderer";
 import useBlog from "@/hooks/useBlog";
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
+import { blogDataWithContent } from "@/lib/blog-data";
 
 export default function BlogBody() {
   const [post, setPost] = useState(null);
-  const { getBlog, loading } = useBlog();
+  // const { getBlog, loading } = useBlog();
   const { slug } = useParams();
   const router = useRouter();
 
   useEffect(() => {
-    const fetchPost = async () => {
-      const post = await getBlog(slug);
-      setPost(post);
-    };
-    fetchPost();
+    // const fetchPost = async () => {
+    //   const post = await getBlog(slug);
+    //   setPost(post);
+    // };
+    // fetchPost();
+
+    const post = blogDataWithContent.find((post) => post.slug === slug);
+    setPost(post);
   }, []);
 
-  if (loading) {
-    return (
-      <article className="py-16 md:py-20">
-        <div className="container h-[561.63px] flex items-center justify-center">
-          <Loader2 className="h-8 w-8 animate-spin" />
-        </div>
-      </article>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <article className="py-16 md:py-20">
+  //       <div className="container h-[561.63px] flex items-center justify-center">
+  //         <Loader2 className="h-8 w-8 animate-spin" />
+  //       </div>
+  //     </article>
+  //   );
+  // }
 
   if (!post) {
     return (

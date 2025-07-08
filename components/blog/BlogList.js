@@ -8,41 +8,43 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { blogData } from "@/lib/blog-data";
 
 export default function BlogList() {
-  const { blogs, loading, getList } = useBlog();
+  // const { blogs, loading, getList } = useBlog();
+  const blogs = blogData;
   const router = useRouter();
 
-  useEffect(() => {
-    getList();
-  }, []);
+  // useEffect(() => {
+  //   getList();
+  // }, []);
 
-  if (loading) {
-    return (
-      <section className="py-16 md:py-20">
-        <div className="container h-[561.63px] flex items-center justify-center">
-          <Loader2 className="h-8 w-8 animate-spin" />
-        </div>
-      </section>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <section className="py-16 md:py-20">
+  //       <div className="container h-[561.63px] flex items-center justify-center">
+  //         <Loader2 className="h-8 w-8 animate-spin" />
+  //       </div>
+  //     </section>
+  //   );
+  // }
 
-  if (!blogs.length) {
-    return (
-      <section className="py-16 md:py-20">
-        <div className="container h-[561.63px] flex flex-col items-center justify-center">
-          <div className="rounded-full flex items-center justify-center w-16 h-16 bg-black/10">
-            <CopyX className="h-5 w-5 text-black" />
-          </div>
-          <p className="text-black/60 mt-4 text-center">
-            Pssst! Quite empty here
-            <br />
-            Visit again to see some blogs
-          </p>
-        </div>
-      </section>
-    );
-  }
+  // if (!blogs.length) {
+  //   return (
+  //     <section className="py-16 md:py-20">
+  //       <div className="container h-[561.63px] flex flex-col items-center justify-center">
+  //         <div className="rounded-full flex items-center justify-center w-16 h-16 bg-black/10">
+  //           <CopyX className="h-5 w-5 text-black" />
+  //         </div>
+  //         <p className="text-black/60 mt-4 text-center">
+  //           Pssst! Quite empty here
+  //           <br />
+  //           Visit again to see some blogs
+  //         </p>
+  //       </div>
+  //     </section>
+  //   );
+  // }
 
   return (
     <section className="py-16 md:py-20">

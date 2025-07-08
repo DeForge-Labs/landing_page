@@ -5,23 +5,26 @@ import { useEffect } from "react";
 import { Loader2 } from "lucide-react";
 import { CopyX } from "lucide-react";
 import TemplateCard from "./TemplateCard";
+import templateData from "@/lib/template-data";
 
 export default function TemplateList() {
-  const { templates, loading, getTemplates } = useTemplate();
+  // const { templates, loading, getTemplates } = useTemplate();
 
-  useEffect(() => {
-    getTemplates();
-  }, []);
+  const templates = templateData;
 
-  if (loading) {
-    return (
-      <section className="py-16 md:py-20">
-        <div className="container h-[561.63px] flex items-center justify-center">
-          <Loader2 className="h-8 w-8 animate-spin" />
-        </div>
-      </section>
-    );
-  }
+  // useEffect(() => {
+  //   getTemplates();
+  // }, []);
+
+  // if (loading) {
+  //   return (
+  //     <section className="py-16 md:py-20">
+  //       <div className="container h-[561.63px] flex items-center justify-center">
+  //         <Loader2 className="h-8 w-8 animate-spin" />
+  //       </div>
+  //     </section>
+  //   );
+  // }
 
   if (!templates.length) {
     return (
