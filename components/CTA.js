@@ -38,6 +38,18 @@ export default function CTA() {
           >
             Join the Waitlist
           </Button>
+
+          <a
+            href="https://startupfa.me/s/deforge?utm_source=deforge.io"
+            target="_blank"
+          >
+            <img
+              src="https://startupfa.me/badges/featured-badge.webp"
+              alt="Featured on Startup Fame"
+              width="171"
+              height="54"
+            />
+          </a>
         </div>
 
         <div className="h-[20rem] md:flex items-center justify-center absolute -bottom-28 hidden">
