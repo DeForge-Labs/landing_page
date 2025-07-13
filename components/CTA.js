@@ -2,6 +2,7 @@
 
 import { Button } from "@heroui/react";
 import { TextHoverEffect } from "./ui/text-hover-effect";
+import Script from "next/script";
 
 export default function CTA() {
   return (
@@ -15,31 +16,26 @@ export default function CTA() {
           receive exclusive updates on our progress.
         </p>
 
-        <div className="flex sm:flex-row flex-col items-center gap-6 mt-4">
-          <a href="https://dang.ai/" target="_blank">
-            <img
-              src="https://cdn.prod.website-files.com/63d8afd87da01fb58ea3fbcb/6487e2868c6c8f93b4828827_dang-badge.png"
-              alt="Dang.ai"
-              style={{
-                width: "150px",
-                height: "56px",
-              }}
-              width="150"
-              height="56"
-            />
-          </a>
-
-          <a
-            href="https://startupfa.me/s/deforge?utm_source=deforge.io"
-            target="_blank"
+        <div className="flex sm:flex-row flex-col items-center gap-6">
+          <div
+            className="sf-root"
+            data-id="3891961"
+            data-badge="light-default"
+            data-variant-id="sf"
+            style={{ width: "125px" }}
           >
-            <img
-              src="https://startupfa.me/badges/featured-badge.webp"
-              alt="Featured on Startup Fame"
-              width="171"
-              height="54"
-            />
-          </a>
+            <a
+              href="https://sourceforge.net/software/product/Deforge/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Deforge Reviews
+            </a>
+          </div>
+          <Script
+            src="https://b.sf-syn.com/badge_js?sf_id=3891961&variant_id=sf"
+            strategy="afterInteractive"
+          />
         </div>
 
         <Button
