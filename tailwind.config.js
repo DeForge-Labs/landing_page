@@ -25,6 +25,7 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        dark: "var(--dark)",
       },
 
       animation: {

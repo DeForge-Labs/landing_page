@@ -11,8 +11,8 @@
   "dependencies": {
     "@heroui/react": "^2.6.14",
     "@radix-ui/react-dialog": "^1.1.14",
+    "@radix-ui/react-select": "^2.2.5",
     "@radix-ui/react-visually-hidden": "^1.2.3",
-    "@xyflow/react": "^12.5.1",
     "axios": "^1.9.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.6.2",
@@ -23,6 +23,7 @@
     "react-dom": "^19.0.0",
     "react-markdown": "^10.1.0",
     "react-syntax-highlighter": "^15.6.1",
+    "reactflow": "^11.11.4",
     "remark-gfm": "^4.0.1",
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7"
