@@ -82,7 +82,7 @@ export default function Forms() {
         </div>
 
         {/* Main 3-Column Layout for the Builder Animation */}
-        <div className="flex-1 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8">
+        <div className="flex-1 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8 relative">
           {/* Left Toolbox */}
           <ToolboxPanel
             items={leftToolboxItems}
@@ -113,6 +113,7 @@ export default function Forms() {
           />
         </div>
       </div>
+      <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-background to-transparent"></div>
     </div>
   );
 }
@@ -185,7 +186,7 @@ function AnimatedFormField({
             className="mt-2 border border-black/50 rounded-lg h-12 light"
             classNames={{
               inputWrapper:
-                "bg-background data-[hover=true]:bg-background group-data-[focus=true]:bg-background",
+                "bg-background data-[hover=true]:bg-background group-data-[focus=true]:bg-background shadow-none",
               input: "text-base mt-1",
             }}
           />
@@ -200,7 +201,7 @@ function AnimatedFormField({
             className="mt-2 border border-black/50 rounded-lg h-28 light"
             classNames={{
               inputWrapper:
-                "bg-background data-[hover=true]:bg-background group-data-[focus=true]:bg-background",
+                "bg-background data-[hover=true]:bg-background group-data-[focus=true]:bg-background shadow-none",
               input: "text-base",
             }}
           />
@@ -208,9 +209,9 @@ function AnimatedFormField({
       )}
       {type === "Select" && (
         <div className="lg:block hidden">
-          <p className="font-medium">Select your OpenAI model</p>
+          <p className="font-medium mb-2">Select your OpenAI model</p>
 
-          <Select value={"gpt-4o-mini"} onValueChange={(value) => {}}>
+          <Select value={"gpt-4o-mini"} onValueChange={(value) => {}} disabled>
             <SelectTrigger className="text-md border border-black/50 rounded-lg h-12">
               <SelectValue placeholder={"Select Model"} />
             </SelectTrigger>
