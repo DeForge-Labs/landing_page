@@ -4,7 +4,12 @@ import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { cn } from "@/lib/utils";
 import { X } from "lucide-react";
 
-export const StickyBanner = ({ className, children, hideOnScroll = false }) => {
+export const StickyBanner = ({
+  className,
+  children,
+  hideOnScroll = false,
+  onClick = () => {},
+}) => {
   const [open, setOpen] = useState(true);
   const { scrollY } = useScroll();
 
@@ -19,7 +24,7 @@ export const StickyBanner = ({ className, children, hideOnScroll = false }) => {
   return (
     <motion.div
       className={cn(
-        "sticky inset-x-0 top-0 z-40 flex min-h-14 w-full items-center justify-center bg-transparent",
+        "sticky inset-x-0 top-0 z-40 flex min-h-14 w-full items-center justify-center bg-transparent cursor-pointer",
         className
       )}
       initial={{
@@ -34,6 +39,7 @@ export const StickyBanner = ({ className, children, hideOnScroll = false }) => {
         duration: 0.3,
         ease: "easeInOut",
       }}
+      onClick={onClick}
     >
       {children}
       <motion.button

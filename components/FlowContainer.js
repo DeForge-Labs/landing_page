@@ -1,11 +1,6 @@
 "use client";
 import { useEffect, useState, useCallback } from "react";
-import ReactFlow, {
-  Background,
-  Controls,
-  ReactFlowProvider,
-  useReactFlow,
-} from "reactflow";
+import ReactFlow, { ReactFlowProvider, useReactFlow } from "reactflow";
 import "reactflow/dist/style.css";
 import KbNode from "./flowContainer/KbNode";
 import OpenAINode from "./flowContainer/OpenAINode";
@@ -124,9 +119,9 @@ const ResponsiveFlow = () => {
     {
       id: "2-3",
       source: "2",
-      sourceHandle: "output-Message-text",
+      sourceHandle: "output-RAG-RAG",
       target: "3",
-      targetHandle: "input-Query-text",
+      targetHandle: "input-Knowledge Base-RAG",
       animated: true,
       style: {
         stroke: "#1d1f26",

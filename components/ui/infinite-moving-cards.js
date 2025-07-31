@@ -85,7 +85,7 @@ export const InfiniteMovingCards = ({
                 aria-hidden="true"
                 className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
-              <div className="rounded-lg border bg-background p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="rounded-lg border border-black/50 bg-background p-6 shadow-sm hover:shadow-md transition-shadow">
                 <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
                   {item.icon}
                 </div>

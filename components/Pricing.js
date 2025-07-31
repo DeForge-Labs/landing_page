@@ -59,7 +59,7 @@ export default function PricingSection() {
         {plans.map((plan, i) => (
           <div
             key={i}
-            className={`rounded-lg border ${
+            className={`rounded-lg border border-black/50 ${
               plan.popular
                 ? "border-primary shadow-lg"
                 : "bg-background shadow-sm"

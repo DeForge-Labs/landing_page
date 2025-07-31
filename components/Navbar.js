@@ -35,7 +35,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background">
+    <header className="sticky top-0 z-[99] w-full border-b border-black/50 bg-background">
       <div className="container flex h-16 items-center justify-between py-4">
         <div className="flex gap-6 md:gap-10 items-center">
           <Link href="/" className="flex items-center space-x-2">
@@ -61,13 +61,6 @@ export default function Navbar() {
               }}
             >
               Features
-            </Button>
-            <Button
-              size="sm"
-              className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
-              onPress={() => router.push("/templates")}
-            >
-              Templates
             </Button>
             <Button
               size="sm"
