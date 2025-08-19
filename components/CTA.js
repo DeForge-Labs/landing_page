@@ -16,18 +16,19 @@ export default function CTA() {
             Be Among the First to Experience Deforge
           </h2>
           <p className="text-primary-foreground/80 text-base md:text-lg max-w-2xl mt-2">
-            Join our waitlist today and get early access when we launch. Plus,
-            receive exclusive updates on our progress.
+            Deforge is now available for public beta. Try it out today and give
+            us your feedback! Your feedback is invaluable to us as we continue
+            to improve Deforge.
           </p>
 
           <Button
             size="lg"
             className=" bg-[var(--primary)] text-black w-fit mt-10 mb-5 md:mb-0"
             onPress={() => {
-              window.open("https://app.youform.com/forms/dgj8cqyw", "_blank");
+              window.open("https://app.deforge.io", "_blank");
             }}
           >
-            Join the Waitlist
+            Launch App
           </Button>
         </div>
 

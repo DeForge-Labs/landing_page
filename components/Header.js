@@ -1,15 +1,17 @@
 "use client";
 
 import { Button } from "@heroui/react";
-import Image from "next/image";
 import FlowContainer from "./FlowContainer";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
+  const router = useRouter();
   return (
     <section className="pt-12 md:pt-20 lg:pt-28  text-black">
       <div className="container flex flex-col items-center text-center gap-6 md:gap-8 mb-0">
         <div className="inline-block rounded-full bg-[var(--secondary)] px-3 py-1 text-sm">
-          Introducing <span className="font-semibold">Deforge</span>
+          Deforge is now available in{" "}
+          <span className="font-semibold">Open beta</span>
         </div>
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter max-w-3xl">
           Build AI Agents Visually,{" "}
@@ -26,10 +28,10 @@ export default function Header() {
             className="gap-2 border border-[black]"
             variant="outline"
             onPress={() => {
-              window.open("https://app.youform.com/forms/dgj8cqyw", "_blank");
+              router.push("/agents");
             }}
           >
-            Join Waitlist
+            Browse Agents
           </Button>
 
           <Button
