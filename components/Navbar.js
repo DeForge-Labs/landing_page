@@ -62,6 +62,14 @@ export default function Navbar() {
             >
               Features
             </Button>
+
+            <Button
+              size="sm"
+              className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
+              onPress={() => router.push("/agents")}
+            >
+              Agents
+            </Button>
             <Button
               size="sm"
               className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
@@ -152,10 +160,11 @@ export default function Navbar() {
               <Button
                 size="sm"
                 className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)] justify-start"
-                onPress={() => handleNavigation("/templates")}
+                onPress={() => handleNavigation("/agents")}
               >
-                Templates
+                Agents
               </Button>
+
               <Button
                 size="sm"
                 className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)] justify-start"
