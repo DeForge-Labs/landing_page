@@ -62,7 +62,11 @@ export function TemplateCard({ template }) {
         </div>
 
         <div className="mt-auto">
-          <Button className="w-full py-5" size="sm">
+          <Button
+            className="w-full py-5"
+            size="sm"
+            onPress={() => window.open(template.link, "_blank")}
+          >
             Use Agent
           </Button>
         </div>
