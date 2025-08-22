@@ -7,8 +7,18 @@ import { useRouter } from "next/navigation";
 export default function Header() {
   const router = useRouter();
   return (
-    <section className="pt-12 md:pt-20 lg:pt-28  text-black">
+    <section className="pt-12 md:pt-20 lg:pt-20 text-black">
       <div className="container flex flex-col items-center text-center gap-6 md:gap-8 mb-0">
+        <a
+          href="https://www.producthunt.com/products/deforge-open-beta?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-deforge&#0045;open&#0045;beta"
+          target="_blank"
+        >
+          <img
+            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1007944&theme=dark&t=1755895465760"
+            alt="Deforge&#0032;&#0045;&#0032;Open&#0032;Beta - Canva&#0032;for&#0032;AI&#0032;Agents | Product Hunt"
+            style={{ width: "250px", height: "54px" }}
+          />
+        </a>
         <div className="inline-block rounded-full bg-[var(--secondary)] px-3 py-1 text-sm">
           Deforge is now available in{" "}
           <span className="font-semibold">Open beta</span>
