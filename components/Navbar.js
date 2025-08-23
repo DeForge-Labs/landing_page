@@ -62,6 +62,14 @@ export default function Navbar() {
             >
               Features
             </Button>
+
+            <Button
+              size="sm"
+              className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
+              onPress={() => router.push("/agents")}
+            >
+              Agents
+            </Button>
             <Button
               size="sm"
               className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
@@ -102,17 +110,18 @@ export default function Navbar() {
               onPress={() => {
                 window.open("https://x.com/deforge_io", "_blank");
               }}
-              className="bg-background border-black border text-black min-w-5"
+              className="bg-background border-black border text-black min-w-5 h-[2.07rem]"
             >
-              <Image src="/logo/x-logo.png" alt="Logo" width={19} height={19} />
+              <Image src="/logo/x-logo.png" alt="Logo" width={15} height={15} />
             </Button>
             <Button
               size="sm"
+              className="min-h-9 h-9"
               onPress={() => {
-                window.open("https://app.youform.com/forms/dgj8cqyw", "_blank");
+                window.open("https://app.deforge.io", "_blank");
               }}
             >
-              Join Waitlist
+              Launch App
             </Button>
           </div>
 
@@ -120,7 +129,7 @@ export default function Navbar() {
           <Button
             size="sm"
             variant="icon"
-            className="md:hidden bg-transparent text-black hover:bg-[var(--secondary)]"
+            className="md:hidden bg-transparent text-black hover:bg-[var(--secondary)] min-h-9 h-9"
             onPress={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -152,10 +161,11 @@ export default function Navbar() {
               <Button
                 size="sm"
                 className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)] justify-start"
-                onPress={() => handleNavigation("/templates")}
+                onPress={() => handleNavigation("/agents")}
               >
-                Templates
+                Agents
               </Button>
+
               <Button
                 size="sm"
                 className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)] justify-start"
