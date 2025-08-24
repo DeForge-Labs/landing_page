@@ -41,7 +41,7 @@ export default function Build() {
             />
             <div className="text-center z-10">
               <VideoModal
-                videoId="lDc1p_yoWmQ"
+                videoId="ZqPwYjSteho"
                 title="Introducing Deforge - A Node Based AI Agent Builder"
               >
                 <div className="w-16 h-16 rounded-full bg-white/70 flex items-center justify-center mx-auto cursor-pointer hover:bg-white transition-colors">
