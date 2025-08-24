@@ -8,6 +8,7 @@ import CTA from "@/components/CTA";
 import Forms from "@/components/Forms";
 import CurvedLoop from "@/components/ui/curved-loop";
 import Banner from "@/components/Banner";
+import Reviews from "@/components/Reviews";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-1 relative">
         <Header />
+        <Reviews />
         <Features />
         <UseCases />
         <Forms />
