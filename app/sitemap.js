@@ -13,7 +13,7 @@ export default function sitemap() {
       priority: 0.5,
     },
     {
-      url: "https://status.deforge.live",
+      url: "https://status.deforge.io",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.5,
@@ -28,6 +28,12 @@ export default function sitemap() {
       url: "https://app.deforge.io/privacy",
       lastModified: new Date(),
       changeFrequency: "yearly",
+      priority: 0.5,
+    },
+    {
+      url: "https://app.deforge.io/about-us",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
       priority: 0.5,
     },
     {
