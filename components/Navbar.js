@@ -53,19 +53,6 @@ export default function Navbar() {
             <Button
               size="sm"
               className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
-              onClick={() => {
-                if (window.location.pathname !== "/") {
-                  router.push("/");
-                }
-                scrollToSection("features");
-              }}
-            >
-              Features
-            </Button>
-
-            <Button
-              size="sm"
-              className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
               onPress={() => router.push("/agents")}
             >
               Agents
@@ -89,12 +76,7 @@ export default function Navbar() {
             <Button
               size="sm"
               className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)]"
-              onClick={() => {
-                if (window.location.pathname !== "/") {
-                  router.push("/");
-                }
-                scrollToSection("pricing");
-              }}
+              onPress={() => handleNavigation("pricing")}
             >
               Pricing
             </Button>
@@ -149,18 +131,6 @@ export default function Navbar() {
               <Button
                 size="sm"
                 className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)] justify-start"
-                onClick={() => {
-                  if (window.location.pathname !== "/") {
-                    router.push("/");
-                  }
-                  scrollToSection("features");
-                }}
-              >
-                Features
-              </Button>
-              <Button
-                size="sm"
-                className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)] justify-start"
                 onPress={() => handleNavigation("/agents")}
               >
                 Agents
@@ -183,12 +153,7 @@ export default function Navbar() {
               <Button
                 size="sm"
                 className="text-sm transition-colors bg-transparent text-black hover:bg-[var(--secondary)] justify-start"
-                onClick={() => {
-                  if (window.location.pathname !== "/") {
-                    router.push("/");
-                  }
-                  scrollToSection("pricing");
-                }}
+                onPress={() => handleNavigation("pricing")}
               >
                 Pricing
               </Button>
@@ -210,12 +175,10 @@ export default function Navbar() {
                 </Button>
                 <Button
                   size="sm"
-                  onPress={() =>
-                    handleExternalLink("https://app.youform.com/forms/dgj8cqyw")
-                  }
+                  onPress={() => handleExternalLink("https://app.deforge.io")}
                   className="flex-1"
                 >
-                  Join Waitlist
+                  Launch App
                 </Button>
               </div>
             </nav>

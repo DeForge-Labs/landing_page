@@ -119,7 +119,7 @@ export default function Reviews() {
   ];
 
   return (
-    <section id="use-cases" className="pt-4">
+    <section id="use-cases" className="pt-16 md:pt-20">
       <div className="container space-y-4">
         <div className="text-center space-y-4">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">

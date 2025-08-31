@@ -60,5 +60,11 @@ export default function sitemap() {
       changeFrequency: "yearly",
       priority: 0.5,
     },
+    {
+      url: "https://deforge.io/pricing",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
   ];
 }

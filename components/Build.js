@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Build() {
   return (
-    <div className="container bg-background pt-24 relative z-50">
+    <div className="container bg-background pt-16 pb-16 relative z-50">
       <div className="rounded-lg border border-black/50 bg-background p-2 py-12 sm:p-6 sm:py-12 mb-12 md:p-8 md:py-16 shadow-sm">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-10 items-center">
           <div className="space-y-6">

@@ -51,14 +51,14 @@ export default function UseCases() {
 
   return (
     <section id="use-cases" className="pt-16 md:pt-20">
-      <div className="container space-y-12">
+      <div className="container space-y-4">
         <div className="text-center space-y-4">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
             Endless Possibilities
           </h2>
           <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
             Discover how Deforge can transform your industry with AI-powered
-            solutions
+            automation and solutions.
           </p>
         </div>
 

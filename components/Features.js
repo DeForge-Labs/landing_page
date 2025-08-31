@@ -3,7 +3,7 @@ import { Layers, Braces, Zap, Code2, Cpu, LinkIcon } from "lucide-react";
 
 export default function Features() {
   return (
-    <section id="features" className="pt-16 md:pt-20">
+    <section id="features" className="pb-10">
       <div className="container space-y-12 md:space-y-16">
         <div className="text-center space-y-4">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
