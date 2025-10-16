@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
         src="https://scripts.simpleanalyticscdn.com/latest.js"
       ></script>
       <body
-        className={`${lexendDeca.className} antialiased overflow-x-hidden`}
+        className={`${lexendDeca.className} antialiased overflow-x-hidden light`}
         suppressHydrationWarning
       >
         <UiProvider>{children}</UiProvider>

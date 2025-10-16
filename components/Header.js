@@ -11,6 +11,7 @@ import {
 import FlowContainer from "./FlowContainer";
 import { useRouter } from "next/navigation";
 import { FlipWords } from "./ui/flip-words";
+import Container from "./ui/container";
 
 export default function Header() {
   const router = useRouter();
@@ -132,8 +133,8 @@ export default function Header() {
   };
 
   return (
-    <section className="pt-12 md:pt-20 lg:pt-20 text-black">
-      <div className="container flex gap-10 flex-col xl:flex-row">
+    <section className="border-b border-dashed border-black/50 text-black">
+      <Container className="flex gap-10 pt-12 md:pt-20 lg:pt-20 flex-col xl:flex-row">
         <div className="mt-5 xl:mt-20 flex flex-col xl:items-start items-center xl:text-start text-center gap-6 md:gap-8 mb-10 xl:mb-0">
           <a
             href="https://www.producthunt.com/products/deforge-open-beta?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_source=badge-deforge"
@@ -211,7 +212,7 @@ export default function Header() {
             </div>
           </Card>
         </div>
-      </div>
+      </Container>
       {/* 
       <div className="container sm:px-[32px] px-0">
         <div className="relative w-full xl:h-[700px] lg:h-[600px] sm:h-[400px] h-[300px] rounded-lg xl:mt-0 lg:mt-4 md:mt-2 mt-4 p-2 md:p-4 overflow-hidden">
