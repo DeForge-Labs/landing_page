@@ -1,141 +1,88 @@
 "use client";
-
-import { Button, Card, Input, Textarea } from "@heroui/react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import FlowContainer from "./FlowContainer";
-import { useRouter } from "next/navigation";
-import { FlipWords } from "./ui/flip-words";
 import Container from "./ui/container";
+import Image from "next/image";
+import { Textarea } from "./ui/textarea";
+import { Button } from "./ui/button";
+import { ArrowUpRight } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
-  const router = useRouter();
-
-  const formAttributes = [
-    {
-      id: "Heading1",
-      label: "Heading",
-      type: "heading1",
-      placeholder: "Agentic Chatbot",
-    },
-    {
-      id: "paragraph",
-      label: "Paragraph",
-      type: "paragraph",
-      placeholder:
-        "This Chatbot facilitates in automating customer support, given the company documentation is provided as Knowledge base and System Prompt.",
-    },
-    {
-      id: "input",
-      label: "Link to Web Page",
-      type: "input",
-      placeholder: "https://docs.deforge.io",
-    },
-    {
-      id: "paragraph2",
-      label: "Paragraph",
-      type: "paragraph",
-      placeholder:
-        "Enter your custom System prompt. System prompts are instructions that guide the AI agent's behavior and responses.",
-    },
-    {
-      id: "textarea",
-      label: "System Prompt",
-      type: "textarea",
-      placeholder:
-        "You are a helpful assistant who answers questions based on the provided documentation.",
-    },
-    {
-      id: "Select",
-      label: "Select",
-      type: "Select",
-      placeholder: "Select your OpenAI model",
-    },
+  const placeholders = [
+    "Create an AI Chatbot which teaches me to code",
+    "Build an agent that summarizes my emails daily",
+    "Make a bot that tracks competitor pricing",
+    "Create an assistant that schedules meetings",
   ];
 
-  const RenderFormFields = ({ type, placeholder, label }) => {
-    return (
-      <>
-        {type === "heading1" && (
-          <h1 className="text-4xl lg:text-5xl font-bold text-black">
-            {placeholder}
-          </h1>
-        )}
-        {type === "paragraph" && (
-          <p className="text-base lg:text-lg text-black">{placeholder}</p>
-        )}
-        {type === "input" && (
-          <div>
-            <p className="font-medium text-black">{label}</p>
-            <Input
-              type={type}
-              value={placeholder}
-              readOnly
-              className="mt-2 border border-black/50 rounded-lg h-12 light"
-              classNames={{
-                inputWrapper:
-                  "bg-background data-[hover=true]:bg-background group-data-[focus=true]:bg-background shadow-none",
-                input: "text-base mt-1",
-              }}
-            />
-          </div>
-        )}
-        {type === "textarea" && (
-          <div className="mb-2">
-            <p className="font-medium text-black">{label}</p>
-            <Textarea
-              value={placeholder}
-              readOnly
-              className="mt-2 border border-black/50 rounded-lg h-28 light"
-              classNames={{
-                inputWrapper:
-                  "bg-background data-[hover=true]:bg-background group-data-[focus=true]:bg-background shadow-none",
-                input: "text-base",
-              }}
-            />
-          </div>
-        )}
-        {type === "Select" && (
-          <div className="lg:block hidden text-black">
-            <p className="font-medium mb-2 ">Select your OpenAI model</p>
+  const [currentPlaceholder, setCurrentPlaceholder] = useState("");
+  const [placeholderIndex, setPlaceholderIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [clockAnimate, setClockAnimate] = useState(false);
+  const [shockAnimate, setShockAnimate] = useState(false);
 
-            <Select
-              value={"gpt-4o-mini"}
-              onValueChange={(value) => {}}
-              disabled
-            >
-              <SelectTrigger className="text-md border border-black/50 rounded-lg h-12">
-                <SelectValue placeholder={"Select Model"} />
-              </SelectTrigger>
-              <SelectContent className="text-md border border-black/50 rounded-lg bg-background">
-                {["gpt-3.5-turbo", "gpt-4", "gpt-4o", "gpt-4o-mini"].map(
-                  (option) => (
-                    <SelectItem
-                      key={option}
-                      value={option}
-                      className="hover:bg-black/5 rounded-md"
-                    >
-                      {option}
-                    </SelectItem>
-                  )
-                )}
-              </SelectContent>
-            </Select>
-          </div>
-        )}
-      </>
+  useEffect(() => {
+    const currentText = placeholders[placeholderIndex];
+
+    const timeout = setTimeout(
+      () => {
+        if (!isDeleting) {
+          if (charIndex < currentText.length) {
+            setCurrentPlaceholder(currentText.slice(0, charIndex + 1));
+            setCharIndex(charIndex + 1);
+          } else {
+            setTimeout(() => setIsDeleting(true), 2000);
+          }
+        } else {
+          if (charIndex > 0) {
+            setCurrentPlaceholder(currentText.slice(0, charIndex - 1));
+            setCharIndex(charIndex - 1);
+          } else {
+            setIsDeleting(false);
+            setPlaceholderIndex((placeholderIndex + 1) % placeholders.length);
+          }
+        }
+      },
+      isDeleting ? 30 : 50
     );
-  };
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, placeholderIndex, placeholders]);
+
+  useEffect(() => {
+    const triggerClockAnimation = () => {
+      setClockAnimate(true);
+      setTimeout(() => setClockAnimate(false), 500);
+
+      const nextDelay = 5000 + Math.random() * 10000;
+      setTimeout(triggerClockAnimation, nextDelay);
+    };
+
+    const initialDelay = 1000 + Math.random() * 5000;
+    const timeoutId = setTimeout(triggerClockAnimation, initialDelay);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
+
+  useEffect(() => {
+    const triggerShockAnimation = () => {
+      setShockAnimate(true);
+      setTimeout(() => setShockAnimate(false), 600);
+
+      const nextDelay = 5000 + Math.random() * 10000;
+      setTimeout(triggerShockAnimation, nextDelay);
+    };
+
+    const initialDelay = 1000 + Math.random() * 5000;
+    const timeoutId = setTimeout(triggerShockAnimation, initialDelay);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
 
   return (
     <section className="border-b border-dashed border-black/50 text-black">
-      <Container className="flex gap-10 pt-12 md:pt-20 lg:pt-20 flex-col xl:flex-row">
-        <div className="mt-5 xl:mt-20 flex flex-col xl:items-start items-center xl:text-start text-center gap-6 md:gap-8 mb-10 xl:mb-0">
+      <Container className="flex gap-10 pt-12 flex-col pb-12 sm:pb-40 xl:flex-row justify-center !px-0">
+        <div className="mt-5 xl:mt-20 flex flex-col items-center text-center gap-6 md:gap-8 mb-10 xl:mb-0">
           <a
             href="https://www.producthunt.com/products/deforge-open-beta?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_source=badge-deforge"
             target="_blank"
@@ -146,80 +93,122 @@ export default function Header() {
               style={{ width: "250px", height: "54px" }}
             />
           </a>
-          <div className="inline-block rounded-full bg-[var(--secondary)] px-3 py-1 text-sm w-fit -mt-4">
-            Deforge is now available in{" "}
-            <span className="font-semibold">Public beta</span>
-          </div>
-          <h1 className="text-4xl sm:text-6xl lg:text-6xl font-bold tracking-tighter max-w-3xl">
-            AI Agents for <br />
-            <span>
-              <FlipWords
-                words={[
-                  "Everyone",
-                  "Businesses",
-                  "Teams",
-                  "Teachers",
-                  "Marketers",
-                  "Developers",
-                  "Students",
-                  "Doctors",
-                ]}
-                className="text-black xl:-ml-2 -mr-2"
+          <h1 className="text-2xl sm:text-5xl font-bold tracking-tighter max-w-3xl flex flex-col items-center">
+            <span className="flex items-center">
+              Automation in{" "}
+              <Image
+                src="/icons/stopwatch.png"
+                alt="Logo"
+                width={60}
+                height={60}
+                className="-mr-3 sm:-mr-1 -ml-2 sm:ml-1 scale-75 sm:scale-100"
+                style={{
+                  transform: clockAnimate ? "rotate(15deg)" : "rotate(0deg)",
+                  transition: "transform 0.3s ease-in-out",
+                }}
               />
+              Minutes
+            </span>{" "}
+            <span className="flex items-center -mt-6 sm:-mt-1">
+              Power
+              <Image
+                src="/icons/shock.png"
+                alt="Logo"
+                width={60}
+                height={60}
+                className="-mr-3 sm:-mr-1 -ml-2 sm:ml-1 scale-75 sm:scale-100"
+                style={{
+                  transform: shockAnimate
+                    ? "translateY(-5px)"
+                    : "translateY(0)",
+                  transition:
+                    "transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+                }}
+              />
+              without Limits
             </span>{" "}
           </h1>
-          <p className="text-base md:text-base text-gray-600 max-w-xl -mt-3">
-            Visually design, connect, and deploy powerful AI agents with our
-            intuitive node-based builder. Then, wrap any workflow into a
-            user-friendly form for anyone to use. No coding, no hunting for API
-            keys.
+          <p className="sm:text-base text-gray-600 max-w-xl -mt-6 text-sm">
+            Build your own AI Agents without writing a single line of code.
+            Simply chat to build your agent and deploy it in minutes.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button
-              size="lg"
-              className="gap-2 border border-[black]"
-              variant="outline"
-              onPress={() => {
-                router.push("/agents");
-              }}
-            >
-              Browse Agents
-            </Button>
+          <div className="flex flex-col gap-3 items-center">
+            <div className="relative sm:w-[600px] min-w-[360px]">
+              <Textarea
+                placeholder={currentPlaceholder}
+                className="w-full border border-black/50 rounded-lg h-28 p-2 px-1"
+                style={{ resize: "none", fontSize: "16px" }}
+              />
+              <Button
+                className="absolute bottom-2 right-2 rounded-full p-4 !shadow-none before:!shadow-none"
+                onClick={() => {}}
+              >
+                <ArrowUpRight />
+              </Button>
+            </div>
 
-            <Button
-              size="lg"
-              className="gap-2 text-background bg-black/80 px-7"
-              onPress={() => {
-                window.open("https://app.deforge.io", "_blank");
-              }}
-            >
-              Launch App
-            </Button>
+            <div className="flex sm:w-[600px] w-[360px] flex-col sm:flex-row  items-center gap-3">
+              <Button
+                className="flex-1 rounded-sm text-[10px] text-xs flex flex-col items-start whitespace-normal p-2 px-3"
+                variant={"secondary"}
+              >
+                <div className="bg-background rounded-md shadow-sm">
+                  <Image
+                    src="/icons/Chat.png"
+                    alt="Logo"
+                    width={50}
+                    height={50}
+                    className="-mr-1"
+                  />
+                </div>
+                <div>Customer Support Agent</div>
+                <div className="text-[10px] text-black/50 text-start -mt-1">
+                  Spin up your own bot that can answer your customers about your
+                  product
+                </div>
+              </Button>
+              <Button
+                className="flex-1 rounded-sm text-[10px] text-xs flex flex-col items-start  whitespace-normal p-2 px-3"
+                variant={"secondary"}
+              >
+                <div className="bg-background rounded-md shadow-sm">
+                  <Image
+                    src="/icons/Suitcase.png"
+                    alt="Logo"
+                    width={50}
+                    height={50}
+                    className="-mr-1"
+                  />
+                </div>
+                <span>Automated Job Search</span>
+                <span className="text-[10px] text-black/50 -mt-1 text-start">
+                  Search for jobs based on your required job role and export
+                  them to an excel sheet
+                </span>
+              </Button>
+              <Button
+                className="flex-1 rounded-sm text-[10px] text-xs flex flex-col items-start  whitespace-normal p-2 px-3"
+                variant={"secondary"}
+              >
+                <div className="bg-background rounded-md shadow-sm">
+                  <Image
+                    src="/icons/Folder.png"
+                    alt="Logo"
+                    width={50}
+                    height={50}
+                    className="-mr-1"
+                  />
+                </div>
+                <span>Agent Library</span>
+                <span className="text-[10px] text-black/50 -mt-1 text-start">
+                  Use pre-built agents to get started and deploy simply by
+                  filling a form
+                </span>
+              </Button>
+            </div>
           </div>
         </div>
-
-        <div className="flex-1 flex items-center justify-center">
-          <Card className="w-full h-full bg-background/80 backdrop-blur-sm border-black/50 max-w-3xl border-b-0 border-1 shadow-xl p-8 lg:p-12 flex flex-col rounded-xl rounded-b-none">
-            <div className="flex-1 flex flex-col justify-start space-y-6 lg:space-y-8 xl:space-y-8">
-              {formAttributes.map((attr, index) => (
-                <RenderFormFields
-                  key={index}
-                  type={attr.type}
-                  placeholder={attr.placeholder}
-                  label={attr.label}
-                />
-              ))}
-            </div>
-          </Card>
-        </div>
       </Container>
-      {/* 
-      <div className="container sm:px-[32px] px-0">
-        <div className="relative w-full xl:h-[700px] lg:h-[600px] sm:h-[400px] h-[300px] rounded-lg xl:mt-0 lg:mt-4 md:mt-2 mt-4 p-2 md:p-4 overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full z-50"></div>
-          <FlowContainer />
-        </div>
-      </div> */}
     </section>
   );
 }

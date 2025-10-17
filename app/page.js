@@ -14,7 +14,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-1 relative">
         <Header />
-        <CurvedLoop />
+        {/* <CurvedLoop /> */}
         <Editor />
         <Features />
         <UseCases />
