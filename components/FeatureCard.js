@@ -1,11 +1,11 @@
 export default function FeatureCard({ icon, title, description }) {
   return (
-    <div className="rounded-lg border border-black/50 bg-background p-6 shadow-sm hover:shadow-md transition-shadow">
-      <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
+    <div className="rounded-sm bg-secondary p-6 shadow-md hover:shadow-md transition-shadow">
+      <div className="h-16 w-16 bg-background rounded-sm shadow-md flex items-center justify-center text-primary mb-4">
         {icon}
       </div>
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
+      <h3 className="text-lg font-semibold mb-2">{title}</h3>
+      <p className="text-muted-foreground text-sm">{description}</p>
     </div>
   );
 }

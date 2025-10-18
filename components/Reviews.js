@@ -1,7 +1,12 @@
-import { InfiniteMovingCards2 } from "./ui/infinite-moving-cards-2";
+"use client";
+
+import Image from "next/image";
+import Container from "./ui/container";
+import { Badge } from "./ui/badge";
+import { useState, useEffect } from "react";
 
 export default function Reviews() {
-  const reviews1 = [
+  const allReviews = [
     {
       platform: "Product Hunt",
       title: "Cruise Chen",
@@ -18,7 +23,7 @@ export default function Reviews() {
       platform: "Product Hunt",
       title: "Hrvoje Pavlinović",
       description:
-        "This is a gamechanger because it’s opening up agent building possibility to non-technical people. Imagine how many corporates could benefit from this kind of flexibility. Kudos to the team!",
+        "This is a gamechanger because it's opening up agent building possibility to non-technical people. Imagine how many corporates could benefit from this kind of flexibility. Kudos to the team!",
     },
     {
       platform: "Reddit",
@@ -38,14 +43,11 @@ export default function Reviews() {
       description:
         "I am not that curious about AI Agents, but Deforge is a game changer for me. I can finally build AI agents without any code.",
     },
-  ];
-
-  const reviews2 = [
     {
       platform: "Product Hunt",
       title: "Jason",
       description:
-        "Congratulations on launch ！ Deforge looks like a huge step forward for making AI agents accessible to everyone",
+        "Congratulations on launch! Deforge looks like a huge step forward for making AI agents accessible to everyone",
     },
     {
       platform: "Reddit",
@@ -57,7 +59,7 @@ export default function Reviews() {
       platform: "Product Hunt",
       title: "Musa Molla",
       description:
-        "Congrats on the launch, Deforge. Love how you’re making agent building accessible beyond devs. ",
+        "Congrats on the launch, Deforge. Love how you're making agent building accessible beyond devs. ",
     },
     {
       platform: "Twitter",
@@ -65,7 +67,6 @@ export default function Reviews() {
       description:
         "I have to say this is freaking amazing mate. Personally, It would be a game changer fr.",
     },
-
     {
       platform: "Product Hunt",
       title: "Precious Ekweson",
@@ -78,9 +79,6 @@ export default function Reviews() {
       description:
         "it's really easy to use, but not 'stupid easy intuition', which is fine. but you have the potential to put A LOT of custom chatbot/taskbot/customer service wrappers out of work, or capture their business with what you have here. I'm blown away man! ",
     },
-  ];
-
-  const reviews3 = [
     {
       platform: "Product Hunt",
       title: "Ash Grover",
@@ -118,41 +116,132 @@ export default function Reviews() {
     },
   ];
 
+  const [displayedReviews, setDisplayedReviews] = useState(
+    allReviews.slice(0, 6)
+  );
+  const [fadingIndex, setFadingIndex] = useState(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Pick a random index to replace
+      const randomIndex = Math.floor(Math.random() * 6);
+
+      // Start fade out
+      setFadingIndex(randomIndex);
+
+      // After fade out completes, replace the review
+      setTimeout(() => {
+        setDisplayedReviews((prev) => {
+          const newReviews = [...prev];
+
+          // Get a random review that's not currently displayed
+          const availableReviews = allReviews.filter(
+            (review) => !prev.some((r) => r.title === review.title)
+          );
+
+          if (availableReviews.length > 0) {
+            const randomReview =
+              availableReviews[
+                Math.floor(Math.random() * availableReviews.length)
+              ];
+            newReviews[randomIndex] = randomReview;
+          }
+
+          return newReviews;
+        });
+
+        // Start fade in
+        setTimeout(() => {
+          setFadingIndex(null);
+        }, 50);
+      }, 500); // Duration of fade out
+    }, 5000); // Delay between changes (5 seconds)
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section id="use-cases" className="pt-16 md:pt-20">
-      <div className="container space-y-4">
-        <div className="text-center space-y-4">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+    <section id="use-cases" className="border-b border-dashed border-black/50">
+      <Container className="!p-20 flex flex-col gap-16">
+        <div className="text-center space-y-2">
+          <Badge className="bg-secondary border border-black/50 text-black/50 px-3 py-1 rounded-xl">
+            Reviews
+          </Badge>
+          <h2 className="text-2xl lg:text-4xl font-bold mt-2">
             What our users say
           </h2>
-          <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto">
+          <p className="text-muted-foreground text-sm max-w-2xl mx-auto">
             We ranked #1 in Product Hunt, Check our feedback and reviews from
             users who built their AI agents with Deforge.
           </p>
         </div>
 
-        <div className="flex flex-col">
-          <InfiniteMovingCards2
-            items={reviews1}
-            direction="right"
-            speed="slow"
-          />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {displayedReviews.map((item, index) => (
+            <div
+              key={`${item.title}-${index}`}
+              className="relative min-h-[250px]"
+              style={{
+                opacity: fadingIndex === index ? 0 : 1,
+                transition: "opacity 500ms ease-in-out",
+              }}
+            >
+              <blockquote className="h-full">
+                <div
+                  aria-hidden="true"
+                  className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 "
+                ></div>
+                <div className="rounded-lg shadow-md bg-secondary flex flex-col justify-between h-full gap-4 p-6">
+                  <div>
+                    <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground italic text-sm">
+                      "{item.description}"
+                    </p>
+                  </div>
 
-          <InfiniteMovingCards2
-            items={reviews2}
-            direction="left"
-            speed="slow"
-            className="-mt-12"
-          />
+                  <div className="flex text-black items-center gap-2">
+                    {item.platform === "Product Hunt" && (
+                      <>
+                        <Image
+                          src="/testimonials/ProductHunt.svg"
+                          alt="Product Hunt"
+                          width={20}
+                          height={20}
+                        />
+                        <h3 className="font-medium text-sm">Product Hunt</h3>
+                      </>
+                    )}
 
-          <InfiniteMovingCards2
-            items={reviews3}
-            direction="right"
-            speed="slow"
-            className="-mt-12"
-          />
+                    {item.platform === "Reddit" && (
+                      <>
+                        <Image
+                          src="/testimonials/reddit.png"
+                          alt="Reddit"
+                          width={20}
+                          height={20}
+                        />
+                        <h3 className="font-medium text-sm">Reddit</h3>
+                      </>
+                    )}
+
+                    {item.platform === "Twitter" && (
+                      <>
+                        <Image
+                          src="/testimonials/x-logo.png"
+                          alt="Twitter"
+                          width={20}
+                          height={20}
+                        />
+                        <h3 className="font-medium text-sm">X/Twitter</h3>
+                      </>
+                    )}
+                  </div>
+                </div>
+              </blockquote>
+            </div>
+          ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

@@ -82,7 +82,7 @@ export default function Header() {
   return (
     <section className="border-b border-dashed border-black/50 text-black">
       <Container className="flex gap-10 pt-12 flex-col pb-12 sm:pb-40 xl:flex-row justify-center !px-0">
-        <div className="mt-5 xl:mt-20 flex flex-col items-center text-center gap-6 md:gap-8 mb-10 xl:mb-0">
+        <div className="mt-5 xl:mt-20 flex flex-col items-center text-center gap-6 md:gap-8">
           <a
             href="https://www.producthunt.com/products/deforge-open-beta?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_source=badge-deforge"
             target="_blank"
@@ -116,7 +116,7 @@ export default function Header() {
                 alt="Logo"
                 width={60}
                 height={60}
-                className="-mr-3 sm:-mr-1 -ml-2 sm:ml-1 scale-75 sm:scale-100"
+                className="-mr-3 sm:-mr-1 -ml-2 sm:ml-0 scale-75 sm:scale-100"
                 style={{
                   transform: shockAnimate
                     ? "translateY(-5px)"
