@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Features() {
   return (
     <section id="features" className="border-b border-dashed border-black/50">
-      <Container className="flex flex-col gap-16 py-20 !px-20">
+      <Container className="flex flex-col gap-16 py-12 sm:py-20 sm:!px-20 !px-4">
         <div className="text-center space-y-2">
           <Badge className="bg-secondary border border-black/50 text-black/50 px-3 py-1 rounded-xl">
             Features

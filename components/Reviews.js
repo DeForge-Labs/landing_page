@@ -161,8 +161,8 @@ export default function Reviews() {
   }, []);
 
   return (
-    <section id="use-cases" className="border-b border-dashed border-black/50">
-      <Container className="!p-20 flex flex-col gap-16">
+    <section id="use-cases" className="">
+      <Container className="!py-12 sm:!p-20 p-4 flex flex-col gap-16">
         <div className="text-center space-y-2">
           <Badge className="bg-secondary border border-black/50 text-black/50 px-3 py-1 rounded-xl">
             Reviews

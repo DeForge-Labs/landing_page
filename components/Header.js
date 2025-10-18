@@ -81,7 +81,7 @@ export default function Header() {
 
   return (
     <section className="border-b border-dashed border-black/50 text-black">
-      <Container className="flex gap-10 pt-12 flex-col pb-12 sm:pb-40 xl:flex-row justify-center !px-0">
+      <Container className="flex gap-10 pt-12 flex-col pb-12 sm:pb-40 xl:flex-row justify-center px-4 sm:!px-0">
         <div className="mt-5 xl:mt-20 flex flex-col items-center text-center gap-6 md:gap-8">
           <a
             href="https://www.producthunt.com/products/deforge-open-beta?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_source=badge-deforge"

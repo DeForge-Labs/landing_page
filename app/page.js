@@ -1,10 +1,10 @@
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import Features from "@/components/Features";
-import UseCases from "@/components/Usecase";
 import CTA from "@/components/CTA";
 import Reviews from "@/components/Reviews";
 import Editor from "@/components/Editor";
+import Template from "@/components/Template";
 
 export default function Home() {
   return (
@@ -14,6 +14,7 @@ export default function Home() {
         <Header />
         <Editor />
         <Features />
+        <Template />
         <Reviews />
         <CTA />
       </main>
