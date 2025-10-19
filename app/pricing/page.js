@@ -1,10 +1,8 @@
 import PricingSection from "@/components/pricing/Pricing";
-import PricingHeader from "@/components/pricing/PricingHeader";
 
-export default function Agents() {
+export default function Pricing() {
   return (
     <>
-      <PricingHeader />
       <PricingSection />
     </>
   );

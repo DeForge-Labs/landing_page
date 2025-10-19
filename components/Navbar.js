@@ -46,7 +46,7 @@ export default function Navbar() {
           <nav className="hidden gap-3 md:flex">
             <Button
               size="sm"
-              className="text-xs transition-colors bg-transparent text-black hover:bg-[var(--secondary)] rounded-sm border-none"
+              className="text-xs transition-colors bg-transparent text-black hover:bg-black/5 rounded-sm border-none"
               variant={"secondary"}
               onClick={() => router.push("/agents")}
             >
@@ -54,7 +54,7 @@ export default function Navbar() {
             </Button>
             <Button
               size="sm"
-              className="text-xs transition-colors bg-transparent text-black hover:bg-[var(--secondary)] rounded-sm border-none"
+              className="text-xs transition-colors bg-transparent text-black hover:bg-black/5 rounded-sm border-none"
               variant={"secondary"}
               onClick={() => router.push("/blog")}
             >
@@ -62,7 +62,7 @@ export default function Navbar() {
             </Button>
             <Button
               size="sm"
-              className="text-xs transition-colors bg-transparent text-black hover:bg-[var(--secondary)] rounded-sm border-none"
+              className="text-xs transition-colors bg-transparent text-black hover:bg-black/5 rounded-sm border-none"
               variant={"secondary"}
               onClick={() => {
                 window.open("https://docs.deforge.io", "_blank");
@@ -72,7 +72,7 @@ export default function Navbar() {
             </Button>
             <Button
               size="sm"
-              className="text-xs transition-colors bg-transparent text-black hover:bg-[var(--secondary)] rounded-sm border-none"
+              className="text-xs transition-colors bg-transparent text-black hover:bg-black/5 rounded-sm border-none"
               variant={"secondary"}
               onClick={() => handleNavigation("pricing")}
             >
