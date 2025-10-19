@@ -2,8 +2,6 @@ import { Lexend_Deca } from "next/font/google";
 
 import "./globals.css";
 
-import UiProvider from "@/providers/UiProvider";
-
 import Script from "next/script";
 
 const lexendDeca = Lexend_Deca({

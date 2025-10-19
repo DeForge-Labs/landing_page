@@ -55,7 +55,7 @@ export function TemplateCard({ template }) {
             className="w-full py-2 border border-black/50"
             variant="outline"
             size="sm"
-            onPress={() => window.open(template.link, "_blank")}
+            onClick={() => window.open(template.link, "_blank")}
           >
             Use Agent
           </Button>
