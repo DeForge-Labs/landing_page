@@ -1,10 +1,6 @@
-"use client";
-
 import FlowContainer from "./FlowContainer";
-import ChatbotNode from "./flowContainer/ChatbotNode";
 import { Badge } from "./ui/badge";
 import Container from "./ui/container";
-import { motion } from "framer-motion";
 
 export default function Editor() {
   return (
@@ -13,43 +9,6 @@ export default function Editor() {
       className="border-b border-dashed border-black/50 hidden sm:block"
     >
       <Container className="pt-20 pb-5 !px-0">
-        <motion.div
-          className="absolute w-96 h-96 rounded-full opacity-10"
-          style={{
-            background: "radial-gradient(circle, #3b82f6 0%, transparent 70%)",
-            top: "20%",
-            left: "10%",
-          }}
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.1, 0.15, 0.1],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-
-        <motion.div
-          className="absolute w-96 h-96 rounded-full opacity-10"
-          style={{
-            background: "radial-gradient(circle, #8b5cf6 0%, transparent 70%)",
-            bottom: "20%",
-            right: "10%",
-          }}
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.1, 0.15, 0.1],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-        />
-
         <div className="text-center space-y-2">
           <Badge className="bg-secondary border border-black/50 text-black/50 px-3 py-1 rounded-xl">
             How it Works

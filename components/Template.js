@@ -1,10 +1,7 @@
-"use client";
-
 import Image from "next/image";
 import TemplateCard from "./TemplateCard";
 import { Badge } from "./ui/badge";
 import Container from "./ui/container";
-import { MessageCircle } from "lucide-react";
 
 export default function Template() {
   return (
@@ -82,8 +79,8 @@ export default function Template() {
               <Image
                 src="/icons/ai.png"
                 alt="Logo"
-                width={60}
-                height={60}
+                width={200}
+                height={200}
                 className="absolute bottom-5 right-5 w-30 h-30"
               />
             }

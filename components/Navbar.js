@@ -28,6 +28,7 @@ export default function Navbar() {
         className="flex h-16 items-center justify-between py-4"
         visiblytl={false}
         visiblytr={false}
+        showGlow={false}
       >
         <div className="flex gap-6 md:gap-10 items-center">
           <Link href="/" className="flex items-center space-x-2">
@@ -84,7 +85,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <Button
               size="sm"
-              className="text-xs rounded-sm p-2 px-3"
+              className="text-xs rounded-sm p-2 px-3 !shadow-md !shadow-[#8754ff]"
               onClick={() => {
                 window.open("https://app.deforge.io", "_blank");
               }}

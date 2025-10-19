@@ -149,7 +149,7 @@ export default function Header() {
 
             <div className="flex sm:w-[600px] w-[360px] flex-col sm:flex-row  items-center gap-3">
               <Button
-                className="flex-1 rounded-sm text-[10px] text-xs flex flex-col items-start whitespace-normal p-2 px-3"
+                className="flex-1 rounded-sm text-[10px] text-xs flex flex-col items-start whitespace-normal p-2 px-3  shadow-md"
                 variant={"secondary"}
               >
                 <div className="bg-background rounded-md shadow-sm">
@@ -168,7 +168,7 @@ export default function Header() {
                 </div>
               </Button>
               <Button
-                className="flex-1 rounded-sm text-[10px] text-xs flex flex-col items-start  whitespace-normal p-2 px-3"
+                className="flex-1 rounded-sm text-[10px] text-xs flex flex-col items-start  whitespace-normal p-2 px-3 shadow-md"
                 variant={"secondary"}
               >
                 <div className="bg-background rounded-md shadow-sm">
@@ -187,7 +187,7 @@ export default function Header() {
                 </span>
               </Button>
               <Button
-                className="flex-1 rounded-sm text-[10px] text-xs flex flex-col items-start  whitespace-normal p-2 px-3"
+                className="flex-1 rounded-sm text-[10px] text-xs flex flex-col items-start  whitespace-normal p-2 px-3 shadow-md"
                 variant={"secondary"}
               >
                 <div className="bg-background rounded-md shadow-sm">

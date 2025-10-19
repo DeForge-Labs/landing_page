@@ -5,6 +5,7 @@ import CTA from "@/components/CTA";
 import Reviews from "@/components/Reviews";
 import Editor from "@/components/Editor";
 import Template from "@/components/Template";
+import PreCTA from "@/components/PreCTA";
 
 export default function Home() {
   return (
@@ -12,10 +13,11 @@ export default function Home() {
       <Navbar />
       <main className="flex-1 relative">
         <Header />
-        <Editor />
         <Features />
+        <Editor />
         <Template />
         <Reviews />
+        <PreCTA />
         <CTA />
       </main>
     </div>

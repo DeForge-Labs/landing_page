@@ -10,7 +10,7 @@ export default function TemplateCard({
   return (
     <div
       className={cn(
-        "rounded-sm bg-secondary p-6 shadow-md hover:shadow-md transition-shadow relative ",
+        "rounded-xl bg-secondary p-6 shadow-md hover:shadow-md transition-shadow relative z-10 ",
         className
       )}
     >

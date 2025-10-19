@@ -161,7 +161,7 @@ export default function Reviews() {
   }, []);
 
   return (
-    <section id="use-cases" className="">
+    <section id="use-cases" className="border-b border-dashed border-black/50">
       <Container className="!py-12 sm:!p-20 p-4 flex flex-col gap-16">
         <div className="text-center space-y-2">
           <Badge className="bg-secondary border border-black/50 text-black/50 px-3 py-1 rounded-xl">
@@ -191,7 +191,7 @@ export default function Reviews() {
                   aria-hidden="true"
                   className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 "
                 ></div>
-                <div className="rounded-lg shadow-md bg-secondary flex flex-col justify-between h-full gap-4 p-6">
+                <div className="rounded-xl shadow-md bg-secondary flex flex-col justify-between h-full gap-4 p-6">
                   <div>
                     <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
                     <p className="text-muted-foreground italic text-sm">

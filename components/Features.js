@@ -1,5 +1,4 @@
 import FeatureCard from "./FeatureCard";
-import { Layers, Braces, Zap, Code2, Cpu, LinkIcon } from "lucide-react";
 import Container from "./ui/container";
 import { Badge } from "./ui/badge";
 import Image from "next/image";
@@ -7,7 +6,10 @@ import Image from "next/image";
 export default function Features() {
   return (
     <section id="features" className="border-b border-dashed border-black/50">
-      <Container className="flex flex-col gap-16 py-12 sm:py-20 sm:!px-20 !px-4">
+      <Container
+        className="flex flex-col gap-16 py-12 sm:py-20 sm:!px-20 !px-4"
+        showGlow={false}
+      >
         <div className="text-center space-y-2">
           <Badge className="bg-secondary border border-black/50 text-black/50 px-3 py-1 rounded-xl">
             Features
