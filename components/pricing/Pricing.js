@@ -75,7 +75,12 @@ export default function PricingSection() {
                 <p className="text-muted-foreground text-sm mb-1">/month</p>
               </div>
 
-              <Button className="w-full py-3">Get Started</Button>
+              <Button
+                className="w-full py-3 border border-black/50"
+                variant={"outline"}
+              >
+                Get Started
+              </Button>
 
               <ul className="space-y-2 text-sm opacity-50">
                 {[
@@ -94,7 +99,7 @@ export default function PricingSection() {
           </div>
 
           <div
-            className={`rounded-md relative min-h-[400px] overflow-hidden bg-background border border-black/50 shadow-lg scale-105 shadow-[#8754ff] p-6 md:p-8`}
+            className={`rounded-md relative min-h-[400px] overflow-hidden bg-background border border-black/50 shadow-lg scale-105 shadow-purple-300 p-6 md:p-8`}
           >
             <div className="flex flex-col gap-4">
               <div className="h-32 w-full z-10 flex justify-end">
@@ -163,7 +168,12 @@ export default function PricingSection() {
                 <p className="text-muted-foreground text-sm mb-1">/month</p>
               </div>
 
-              <Button className="w-full py-3">Contact Us</Button>
+              <Button
+                className="w-full py-3 border border-black/50"
+                variant={"outline"}
+              >
+                Contact Us
+              </Button>
 
               <ul className="space-y-2 text-sm opacity-50">
                 {[
@@ -207,7 +217,12 @@ export default function PricingSection() {
                     <p className="text-muted-foreground text-sm mb-1">/∞</p>
                   </div>
 
-                  <Button className="w-full py-3">Get Started</Button>
+                  <Button
+                    className="w-full py-3 border border-black/50"
+                    variant={"outline"}
+                  >
+                    Get Started
+                  </Button>
                 </div>
 
                 <ul className="space-y-2 text-sm opacity-50 mr-10">

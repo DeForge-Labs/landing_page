@@ -5,25 +5,34 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Chip, Button } from "@heroui/react";
-import { Bot, Zap } from "lucide-react";
+import { Badge } from "../ui/badge";
+import { Button } from "../ui/button";
 
 export function TemplateCard({ template }) {
   return (
     <Card className="h-full flex flex-col hover:shadow-lg transition-shadow duration-200 border border-black/50">
       <CardHeader className="pb-3">
-        <div className="flex items-start justify-between gap-2">
+        <div className="flex flex-col gap-2">
+          {template.icon && (
+            <div
+              className="h-20 w-20 border border-black/20 rounded-xl shadow-lg flex items-center justify-center text-primary mb-4"
+              style={{ backgroundColor: template.iconColor }}
+            >
+              {template.icon}
+            </div>
+          )}
+
           <div className="flex items-center gap-2 mb-2">
-            <Chip
+            <Badge
               variant="secondary"
-              className="text-xs bg-green-100 rounded-lg"
+              className="text-xs bg-green-100 rounded-lg p-1 px-2"
             >
               {template.category}
-            </Chip>
+            </Badge>
           </div>
         </div>
-        <CardTitle className="text-lg leading-tight">{template.name}</CardTitle>
-        <CardDescription className="text-sm leading-relaxed">
+        <CardTitle className="text-md leading-tight">{template.name}</CardTitle>
+        <CardDescription className="text-xs leading-relaxed">
           {template.description}
         </CardDescription>
       </CardHeader>
@@ -31,39 +40,20 @@ export function TemplateCard({ template }) {
       <CardContent className="flex-1 flex flex-col gap-4">
         <div className="flex flex-wrap gap-1">
           {template.tags.map((tag) => (
-            <Chip
+            <Badge
               key={tag}
               variant="outline"
-              className="text-xs bg-black/5 rounded-lg capitalize"
+              className="text-xs bg-black/5 rounded-lg capitalize p-1 px-2"
             >
               {tag}
-            </Chip>
+            </Badge>
           ))}
-        </div>
-
-        <div className="space-y-2">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Zap className="h-3 w-3" />
-            <span className="font-medium">Components</span>
-          </div>
-          <div className="text-xs text-muted-foreground flex flex-wrap gap-1">
-            {template.nodes.map((node, index) => {
-              return (
-                <Chip
-                  key={index}
-                  variant="outline"
-                  className="text-xs bg-black/5 rounded-lg capitalize"
-                >
-                  {node}
-                </Chip>
-              );
-            })}
-          </div>
         </div>
 
         <div className="mt-auto">
           <Button
-            className="w-full py-5"
+            className="w-full py-2 border border-black/50"
+            variant="outline"
             size="sm"
             onPress={() => window.open(template.link, "_blank")}
           >
