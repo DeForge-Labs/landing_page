@@ -1,0 +1,356 @@
+// "use client";
+
+// import Script from "next/script";
+// import Link from "next/link";
+// import Image from "next/image";
+// import { Github, Linkedin, Mail, Youtube } from "lucide-react";
+// import Container from "./ui/container";
+
+// export default function CTA() {
+//   return (
+//     <section className="bg-black text-primary-foreground relative overflow-hidden">
+//       <Container
+//         className="text-center md:text-left flex py-20! sm:px-20! px-4! flex-col items-center md:items-start justify-between relative pb-36 md:pb-56 md:gap-y-8 gap-6 border-white!"
+//         visiblytl={false}
+//         visiblytr={false}
+//         visiblybl={false}
+//         visiblybr={false}
+//         showGlow={false}
+//       >
+//         <div className="w-2 h-2 bg-white absolute -top-1 -left-[4.5px] rotate-45"></div>
+
+//         <div className="w-2 h-2 bg-white absolute -top-1 -right-[4.5px] rotate-45"></div>
+
+//         <Image
+//           src="/logo/logo-white.svg"
+//           alt="Logo"
+//           width={400}
+//           height={400}
+//           className="absolute -bottom-1/2 right-1/2 translate-x-1/2 z-10 opacity-10"
+//         />
+
+//         <div className="w-full">
+//           <h2 className="text-2xl font-bold">AI Agents in One Click</h2>
+//           <p className="text-primary-foreground/80 text-xs mt-2">
+//             Deploy AI Agents using Forms in just a few clicks.
+//             <br />
+//             No coding required.
+//           </p>
+//         </div>
+
+//         <div className="flex justify-between md:flex-row flex-col w-full md:items-end items-center gap-10 md:gap-0 mt-10 md:mt-0">
+//           <div className="flex flex-col gap-2 items-center md:items-start">
+//             <div className="flex gap-2">
+//               <Link
+//                 href="mailto:contact@deforge.io"
+//                 className=" h-6 w-6 bg-background rounded-sm flex items-center justify-center hover:underline"
+//                 target="_blank"
+//               >
+//                 <Mail className="h-4 text-black/50 w-4" />
+//               </Link>
+//               <Link
+//                 href="https://x.com/deforge_io"
+//                 className=" h-6 w-6 bg-background rounded-sm flex items-center justify-center hover:underline"
+//                 target="_blank"
+//               >
+//                 <Image
+//                   src="/logo/x-logo.png"
+//                   alt="Logo"
+//                   width={14}
+//                   height={14}
+//                 />
+//               </Link>
+//               <Link
+//                 href="https://github.com/DeForge-Labs"
+//                 className=" h-6 w-6 bg-background rounded-sm flex items-center justify-center hover:underline"
+//                 target="_blank"
+//               >
+//                 <Github className="h-4 text-black/50 w-4" />
+//               </Link>
+//               <Link
+//                 href="https://www.linkedin.com/company/deforgeio/"
+//                 className=" h-6 w-6 bg-background rounded-sm flex items-center justify-center hover:underline"
+//                 target="_blank"
+//               >
+//                 <Linkedin className="h-4 text-black/50 w-4" />
+//               </Link>
+//               <Link
+//                 href="https://www.youtube.com/@DeforgeIo"
+//                 className=" h-6 w-6 bg-background rounded-sm flex items-center justify-center hover:underline"
+//                 target="_blank"
+//               >
+//                 <Youtube className="h-4 text-black/50 w-4" />
+//               </Link>
+//             </div>
+//             <p className="text-xs">© 2025 Deforge. All rights reserved.</p>
+//           </div>
+
+//           <div className="flex gap-10">
+//             <div className="flex flex-col gap-2 items-start">
+//               <p className="text-xs font-bold">Company</p>
+//               <Link
+//                 href="https://app.deforge.io/about-us"
+//                 className="text-xs hover:underline"
+//               >
+//                 About Us
+//               </Link>
+//               <Link
+//                 href="https://app.deforge.io/privacy"
+//                 className="text-xs hover:underline"
+//               >
+//                 Privacy Policy
+//               </Link>
+//               <Link
+//                 href="https://app.deforge.io/ToS"
+//                 className="text-xs hover:underline"
+//               >
+//                 Terms of Service
+//               </Link>
+//               <Link
+//                 href="mailto:contact@deforge.io"
+//                 className="text-xs hover:underline"
+//               >
+//                 Contact Us
+//               </Link>
+//             </div>
+
+//             <div className="flex flex-col gap-2 items-start">
+//               <p className="text-xs font-bold">Resources</p>
+//               <Link href="/pricing" className="text-xs hover:underline">
+//                 Pricing
+//               </Link>
+//               <Link href="/blog" className="text-xs hover:underline">
+//                 Blog
+//               </Link>
+//               <Link
+//                 href="https://docs.deforge.io"
+//                 className="text-xs hover:underline"
+//               >
+//                 Documentation
+//               </Link>
+//               <Link
+//                 href="https://status.deforge.live/"
+//                 className="text-xs hover:underline"
+//               >
+//                 Status
+//               </Link>
+//               <Link href="/agents" className="text-xs hover:underline">
+//                 Agent Gallery
+//               </Link>
+//             </div>
+
+//             <div className="flex flex-col gap-2 items-start">
+//               <p className="text-xs font-bold">Social</p>
+//               <Link
+//                 href="https://x.com/deforge_io"
+//                 className="text-xs hover:underline"
+//               >
+//                 X/Twitter
+//               </Link>
+//               <Link
+//                 href="https://www.linkedin.com/company/deforgeio/"
+//                 className="text-xs hover:underline"
+//               >
+//                 LinkedIn
+//               </Link>
+//               <Link
+//                 href="https://github.com/DeForge-Labs"
+//                 className="text-xs hover:underline"
+//               >
+//                 GitHub
+//               </Link>
+//               <Link
+//                 href="https://www.youtube.com/@DeforgeIo"
+//                 className="text-xs hover:underline"
+//               >
+//                 YouTube
+//               </Link>
+//             </div>
+//           </div>
+//         </div>
+//       </Container>
+//     </section>
+//   );
+// }
+
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { Github, Linkedin, Mail, Youtube } from "lucide-react";
+
+import Container from "../ui/container";
+
+const SOCIAL_LINKS = [
+  {
+    href: "mailto:contact@deforge.io",
+    icon: <Mail className="h-4 w-4 text-black/50" />,
+  },
+  {
+    href: "https://x.com/deforge_io",
+    icon: <Image src="/logo/x-logo.png" alt="X Logo" width={14} height={14} />,
+  },
+  {
+    href: "https://github.com/DeForge-Labs",
+    icon: <Github className="h-4 w-4 text-black/50" />,
+  },
+  {
+    href: "https://www.linkedin.com/company/deforgeio/",
+    icon: <Linkedin className="h-4 w-4 text-black/50" />,
+  },
+  {
+    href: "https://www.youtube.com/@DeforgeIo",
+    icon: <Youtube className="h-4 w-4 text-black/50" />,
+  },
+];
+
+const CTA = () => {
+  return (
+    <section className="bg-black text-primary-foreground relative overflow-hidden">
+      <Container
+        className="text-center md:text-left flex py-20! sm:px-20! px-4! flex-col items-center md:items-start justify-between relative pb-36 md:pb-56 md:gap-y-8 gap-6 border-white!"
+        visiblytl={false}
+        visiblytr={false}
+        visiblybl={false}
+        visiblybr={false}
+        showGlow={false}
+      >
+        <div className="w-2 h-2 bg-white absolute -top-1 -left-[4.5px] rotate-45"></div>
+        <div className="w-2 h-2 bg-white absolute -top-1 -right-[4.5px] rotate-45"></div>
+
+        <Image
+          alt="Logo"
+          width={400}
+          height={400}
+          src="/logo/logo-white.svg"
+          className="absolute -bottom-1/2 right-1/2 translate-x-1/2 z-10 opacity-10"
+        />
+
+        <div className="w-full">
+          <h2 className="text-2xl font-bold">AI Agents in One Click</h2>
+
+          <p className="text-primary-foreground/80 text-xs mt-2">
+            Deploy AI Agents using Forms in just a few clicks.
+            <br /> No coding required.
+          </p>
+        </div>
+
+        <div className="flex flex-col md:flex-row justify-between w-full items-center md:items-end gap-10 md:gap-0 mt-10 md:mt-0">
+          <div className="flex flex-col gap-2 items-center md:items-start">
+            <div className="flex gap-2">
+              {SOCIAL_LINKS.map((s, i) => (
+                <Link
+                  key={i}
+                  href={s.href}
+                  target="_blank"
+                  className="h-6 w-6 bg-background rounded-sm flex items-center justify-center hover:underline"
+                >
+                  {s.icon}
+                </Link>
+              ))}
+            </div>
+
+            <p className="text-xs">© 2025 Deforge. All rights reserved.</p>
+          </div>
+
+          <div className="flex gap-10">
+            <div className="flex flex-col gap-2 items-start">
+              <p className="text-xs font-bold">Company</p>
+
+              <Link
+                href="https://app.deforge.io/about-us"
+                className="text-xs hover:underline"
+              >
+                About Us
+              </Link>
+
+              <Link
+                href="https://app.deforge.io/privacy"
+                className="text-xs hover:underline"
+              >
+                Privacy Policy
+              </Link>
+
+              <Link
+                href="https://app.deforge.io/ToS"
+                className="text-xs hover:underline"
+              >
+                Terms of Service
+              </Link>
+
+              <Link
+                href="mailto:contact@deforge.io"
+                className="text-xs hover:underline"
+              >
+                Contact Us
+              </Link>
+            </div>
+
+            <div className="flex flex-col gap-2 items-start">
+              <p className="text-xs font-bold">Resources</p>
+
+              <Link href="/pricing" className="text-xs hover:underline">
+                Pricing
+              </Link>
+
+              <Link href="/blog" className="text-xs hover:underline">
+                Blog
+              </Link>
+
+              <Link
+                href="https://docs.deforge.io"
+                className="text-xs hover:underline"
+              >
+                Documentation
+              </Link>
+
+              <Link
+                href="https://status.deforge.live/"
+                className="text-xs hover:underline"
+              >
+                Status
+              </Link>
+
+              <Link href="/agents" className="text-xs hover:underline">
+                Agent Gallery
+              </Link>
+            </div>
+
+            <div className="flex flex-col gap-2 items-start">
+              <p className="text-xs font-bold">Social</p>
+              <Link
+                href="https://x.com/deforge_io"
+                className="text-xs hover:underline"
+              >
+                X/Twitter
+              </Link>
+
+              <Link
+                href="https://www.linkedin.com/company/deforgeio/"
+                className="text-xs hover:underline"
+              >
+                LinkedIn
+              </Link>
+
+              <Link
+                href="https://github.com/DeForge-Labs"
+                className="text-xs hover:underline"
+              >
+                GitHub
+              </Link>
+
+              <Link
+                href="https://www.youtube.com/@DeforgeIo"
+                className="text-xs hover:underline"
+              >
+                YouTube
+              </Link>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+};
+
+export default CTA;
