@@ -16,7 +16,7 @@ import { Tabs, TabsList, TabsTrigger } from "../ui/tabs";
 import { useState } from "react";
 
 export default function PricingSection() {
-  const [tab, setTab] = useState("month");
+  const [tab, setTab] = useState("year");
 
   const enterprisePlans = [
     {
@@ -103,10 +103,10 @@ export default function PricingSection() {
                 className="border border-black/50 w-fit rounded-lg pb-0.5"
               >
                 <TabsList className="[&>span]:bg-black/10">
-                  <TabsTrigger value="month" className="text-xs">
+                  <TabsTrigger value="month" className="text-xs text-black/80">
                     Monthly
                   </TabsTrigger>
-                  <TabsTrigger value="year" className="text-xs">
+                  <TabsTrigger value="year" className="text-xs text-black/80">
                     Yearly (15% Off)
                   </TabsTrigger>
                 </TabsList>
@@ -301,15 +301,8 @@ export default function PricingSection() {
                 </div>
 
                 <div className="flex items-end z-20">
-                  <p className="text-5xl font-semibold">
-                    $
-                    {tab === "month"
-                      ? plan.price
-                      : (plan.price * 10).toFixed(2)}
-                  </p>
-                  <p className="text-muted-foreground text-sm mb-1">
-                    {tab === "month" ? "/month" : "/yr"}
-                  </p>
+                  <p className="text-5xl font-semibold">${plan.price}</p>
+                  <p className="text-muted-foreground text-sm mb-1">/month</p>
                 </div>
 
                 <Button

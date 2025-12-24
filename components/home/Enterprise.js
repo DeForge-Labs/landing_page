@@ -3,6 +3,7 @@ import { ProcessorCore } from "./enterprise/ProcessorCore";
 import { Badge } from "../ui/badge";
 import { Check } from "lucide-react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 export default function Enterprise() {
   return (
@@ -62,12 +63,14 @@ export default function Enterprise() {
               ))}
             </div>
 
-            <Button
-              size="lg"
-              className="w-40 py-4 gap-2 text-background bg-black/80 mt-5"
-            >
-              Contact Sales
-            </Button>
+            <Link href="/pricing">
+              <Button
+                size="lg"
+                className="w-40 py-4 gap-2 text-background bg-black/80 mt-5"
+              >
+                View Pricing
+              </Button>
+            </Link>
           </div>
         </div>
       </Container>
