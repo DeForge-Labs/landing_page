@@ -293,7 +293,11 @@ const CTA = () => {
                 Pricing
               </Link>
 
-              <Link href="/blog" className="text-xs hover:underline">
+              <Link
+                href="https://blogs.deforge.io"
+                target="_blank"
+                className="text-xs hover:underline"
+              >
                 Blog
               </Link>
 
@@ -305,13 +309,18 @@ const CTA = () => {
               </Link>
 
               <Link
-                href="https://status.deforge.live/"
+                href="https://status.deforge.io"
+                target="_blank"
                 className="text-xs hover:underline"
               >
                 Status
               </Link>
 
-              <Link href="/agents" className="text-xs hover:underline">
+              <Link
+                href="https://app.deforge.io/templates"
+                target="_blank"
+                className="text-xs hover:underline"
+              >
                 Agent Gallery
               </Link>
             </div>

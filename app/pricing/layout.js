@@ -1,4 +1,4 @@
-import Navbar from "@/components/home/Navbar";
+import Navbar from "@/components/home/navbar/Navbar";
 import CTA from "@/components/home/CTA";
 
 export default function TemplateLayout({ children }) {

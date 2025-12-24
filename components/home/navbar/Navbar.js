@@ -12,7 +12,16 @@ import Container from "../../ui/container";
 import NavButton from "./NavButton";
 
 const navLinks = [
-  { href: "/agents", label: "Agents", isExternal: false },
+  {
+    href: "https://app.deforge.io/templates",
+    label: "Agents",
+    isExternal: true,
+  },
+  {
+    href: "https://forum.deforge.io",
+    label: "Forum",
+    isExternal: true,
+  },
   { href: "https://blogs.deforge.io", label: "Blog", isExternal: true },
   { href: "https://docs.deforge.io", label: "Docs", isExternal: true },
   { href: "/pricing", label: "Pricing", isExternal: false },
@@ -48,7 +57,7 @@ const Navbar = () => {
   );
 
   return (
-    <header className="sticky top-0 w-full border-b border-dashed border-black/50 bg-background z-20">
+    <header className="sticky top-0 w-full border-b border-dashed border-black/50 bg-background z-99">
       <Container
         showGlow={false}
         visiblytl={false}

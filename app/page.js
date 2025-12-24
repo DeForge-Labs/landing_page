@@ -1,7 +1,4 @@
 import CTA from "@/components/home/CTA";
-// import Header from "@/components/Header";
-// import Navbar from "@/components/Navbar";
-// import Editor from "@/components/Editor";
 import PreCTA from "@/components/home/PreCTA";
 import Reviews from "@/components/Reviews";
 import Features from "@/components/home/features/Features";
@@ -9,6 +6,7 @@ import Template from "@/components/home/templates/Template";
 import Editor from "@/components/home/flow/Editor";
 import Header from "@/components/home/header/Header";
 import Navbar from "@/components/home/navbar/Navbar";
+import Enterprise from "@/components/home/Enterprise";
 
 export default function Home() {
   return (
@@ -20,6 +18,7 @@ export default function Home() {
         <Features />
         <Editor />
         <Template />
+        <Enterprise />
         <Reviews />
         <PreCTA />
         <CTA />
