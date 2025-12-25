@@ -14,6 +14,9 @@ import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "../ui/tabs";
 import { useState } from "react";
+import { Zap } from "lucide-react";
+import FeatureCard from "../home/features/FeatureCard";
+import Image from "next/image";
 
 export default function PricingSection() {
   const [tab, setTab] = useState("year");
@@ -140,6 +143,9 @@ export default function PricingSection() {
               <Button
                 className="w-full py-3 border border-black/50"
                 variant={"outline"}
+                onClick={() => {
+                  window.open("https://app.deforge.io", "_blank");
+                }}
               >
                 Get Started
               </Button>
@@ -190,7 +196,14 @@ export default function PricingSection() {
                 </p>
               </div>
 
-              <Button className="w-full py-3">Get Started</Button>
+              <Button
+                className="w-full py-3"
+                onClick={() => {
+                  window.open("https://app.deforge.io", "_blank");
+                }}
+              >
+                Get Started
+              </Button>
 
               <ul className="space-y-2 text-sm opacity-50">
                 {[
@@ -227,12 +240,17 @@ export default function PricingSection() {
 
               <div className="flex items-end">
                 <p className="text-5xl font-semibold">Flexible </p>
-                <p className="text-muted-foreground text-sm mb-1">Pricing</p>
+                <p className="text-muted-foreground text-sm mb-1 ml-1">
+                  Pricing
+                </p>
               </div>
 
               <Button
                 className="w-full py-3 border border-black/50"
                 variant={"outline"}
+                onClick={() => {
+                  window.open("https://app.deforge.io", "_blank");
+                }}
               >
                 Get Started
               </Button>
@@ -323,6 +341,141 @@ export default function PricingSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-20 space-y-12">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tighter">
+              Why Choose <span className="italic font-light">Deforge?</span>
+            </h2>
+            <p className="text-black/60 text-sm mt-2">
+              How we stack up against the technical and enterprise alternatives.
+            </p>
+          </div>
+
+          <div className="overflow-x-auto border border-black/50 rounded-xl bg-background shadow-xl">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-black/5 border-b border-black/50">
+                  <th className="p-4 md:p-6 font-semibold text-sm">Feature</th>
+                  <th className="p-4 md:p-6 font-bold text-sm bg-purple-50/50 flex items-center gap-2">
+                    <Image
+                      priority
+                      width={20}
+                      height={20}
+                      alt="Deforge Logo"
+                      src="/logo/logo-black.svg"
+                    />
+                    <span className="font-bold inline-block text-xl text-black">
+                      Deforge
+                    </span>
+                  </th>
+                  <th className="p-4 md:p-6 font-semibold text-sm opacity-60">
+                    n8n / Langflow
+                  </th>
+                  <th className="p-4 md:p-6 font-semibold text-sm opacity-60 text-right">
+                    Enterprise Tools
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="text-sm">
+                {[
+                  {
+                    label: "Target User",
+                    deforge: "Non-Technical / Ops",
+                    comp1: "Developers",
+                    comp2: "IT Teams",
+                  },
+                  {
+                    label: "Learning Curve",
+                    deforge: "Minutes (No-Code)",
+                    comp1: "Days (Logic-Heavy)",
+                    comp2: "Weeks",
+                  },
+                  {
+                    label: "Deployment",
+                    deforge: "One-Click Chat/Form",
+                    comp1: "Self-hosting / API",
+                    comp2: "Custom Dev",
+                  },
+                  {
+                    label: "Workflow Sharing",
+                    deforge: "Instant Web Forms",
+                    comp1: "Complex API / Webhooks",
+                    comp2: "Custom Portal Dev",
+                  },
+                  {
+                    label: "Interface",
+                    deforge: "Canva-like Visual",
+                    comp1: "Technical Nodes",
+                    comp2: "Complex UI",
+                  },
+                ].map((row, idx) => (
+                  <tr
+                    key={idx}
+                    className="border-b border-black/10 last:border-0 hover:bg-black/[0.02] transition-colors"
+                  >
+                    <td className="p-4 md:p-6 font-medium">{row.label}</td>
+                    <td className="p-4 md:p-6 font-bold text-purple-700 bg-purple-50/30">
+                      <div className="flex items-center gap-2">
+                        <Zap className="h-3 w-3 fill-purple-700" />
+                        {row.deforge}
+                      </div>
+                    </td>
+                    <td className="p-4 md:p-6 opacity-70">{row.comp1}</td>
+                    <td className="p-4 md:p-6 opacity-70 text-right">
+                      {row.comp2}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-10">
+            <div className="space-y-2">
+              <FeatureCard
+                icon={
+                  <Image
+                    src="/icons/CarBoost.png"
+                    width={50}
+                    height={50}
+                    alt="Speed"
+                  />
+                }
+                title="Speed to Value"
+                description="Turn complex workflows into shareable forms instantly. No API hunting required."
+              />
+            </div>
+            <div className="space-y-2">
+              <FeatureCard
+                icon={
+                  <Image
+                    src="/icons/RobotHand.png"
+                    width={50}
+                    height={50}
+                    alt="Robot"
+                  />
+                }
+                title="Multi-Model Native"
+                description="Seamlessly switch between GPT-4o, Claude, and Llama through one visual interface."
+              />
+            </div>
+            <div className="space-y-2">
+              <FeatureCard
+                icon={
+                  <Image
+                    src="/icons/Company.png"
+                    width={50}
+                    height={50}
+                    alt="Enterprise"
+                  />
+                }
+                title="Enterprise Ready"
+                description="Dedicated infrastructure with custom SLAs and SSO for high-demand operations."
+              />
+            </div>
+          </div>
         </div>
       </Container>
     </div>
