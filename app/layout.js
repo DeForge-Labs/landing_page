@@ -2,8 +2,6 @@ import { Lexend_Deca } from "next/font/google";
 
 import "./globals.css";
 
-import UiProvider from "@/providers/UiProvider";
-
 import Script from "next/script";
 
 const lexendDeca = Lexend_Deca({
@@ -68,11 +66,12 @@ export default function RootLayout({ children }) {
         async
         src="https://scripts.simpleanalyticscdn.com/latest.js"
       ></script>
+
       <body
-        className={`${lexendDeca.className} antialiased overflow-x-hidden`}
+        className={`${lexendDeca.className} antialiased overflow-x-hidden light`}
         suppressHydrationWarning
       >
-        <UiProvider>{children}</UiProvider>
+        {children}
       </body>
 
       <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />

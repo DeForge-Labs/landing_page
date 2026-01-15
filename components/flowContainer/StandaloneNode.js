@@ -5,7 +5,7 @@ import { Handle, Position } from "reactflow";
 
 export default function StandaloneField({ input }) {
   return (
-    <div key={input.name} className="mb-2 relative">
+    <div key={input.name} className="relative">
       <div className="text-xs font-medium mb-1">{input.name}</div>
       <div className="flex items-center">
         <div className="relative">
@@ -32,7 +32,7 @@ export default function StandaloneField({ input }) {
             }}
           ></div>
         </div>
-        <div className="h-8 border border-black/50 rounded-md bg-black/5 text-xs flex items-center justify-between w-full px-2">
+        <div className="h-8 border border-black/50 rounded-sm bg-black/5 text-xs flex items-center justify-between w-full px-2">
           {"Connected"}
           <span className="text-xs text-black/60">{input.type}</span>
         </div>

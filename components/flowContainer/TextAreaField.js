@@ -2,7 +2,7 @@
 
 import { Handle, Position } from "reactflow";
 import getColorByType from "@/lib/node-colors";
-import { Textarea } from "@heroui/react";
+import { Textarea } from "../ui/textarea";
 
 export default function TextAreaField({ field, currentValue }) {
   return (
@@ -37,9 +37,12 @@ export default function TextAreaField({ field, currentValue }) {
           variant="outline"
           onChange={(e) => {}}
           placeholder={field.value}
-          className="mt-2 border border-black/50 rounded-lg light"
-          classNames={{
-            inputWrapper: "bg-background",
+          className="mt-2 border border-black/50 rounded-sm"
+          size="lg"
+          rows={3}
+          style={{
+            resize: "none",
+            fontSize: "12px",
           }}
           key={`${field.name}-input`}
         />

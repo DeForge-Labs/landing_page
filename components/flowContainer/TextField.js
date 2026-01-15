@@ -1,13 +1,13 @@
 "use client";
 
 import { Handle, Position } from "reactflow";
-import { Input } from "@heroui/react";
 import getColorByType from "@/lib/node-colors";
+import { Input } from "../ui/input";
 
 export default function TextField({ field, currentValue }) {
   return (
     <div key={field.name} className="mb-2 relative">
-      <div className="text-xs font-medium capitalize">{field.name}</div>
+      <div className="text-xs font-medium capitalize ">{field.name}</div>
       <div className="flex items-center relative">
         <div className="relative">
           <Handle
@@ -37,10 +37,11 @@ export default function TextField({ field, currentValue }) {
           variant="outline"
           onChange={(e) => {}}
           placeholder={field.value}
-          className="mt-2 border border-black/50 rounded-lg light"
-          classNames={{
-            inputWrapper: "bg-background",
+          size="lg"
+          style={{
+            fontSize: "12px",
           }}
+          className="mt-2 border border-black/50 light rounded-sm"
           key={`${field.name}-input`}
         />
       </div>

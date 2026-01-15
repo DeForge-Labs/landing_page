@@ -29,9 +29,9 @@ jobs:
           ssh -p ${{ secrets.VPS_PORT }} -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa "${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }}" bash -c "'
               set -eo pipefail
 
-              cd deforge/landing_page
+              cd DeforgeProd/landing_page
               git pull
-              npm install
-              npm run build
-              pm2 restart 15
+              bun install
+              bun run build
+              pm2 restart "Deforge Prod Landing"
           '"
