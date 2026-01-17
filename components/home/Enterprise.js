@@ -63,14 +63,26 @@ export default function Enterprise() {
               ))}
             </div>
 
-            <Link href="/pricing">
-              <Button
-                size="lg"
-                className="w-40 py-4 gap-2 text-background bg-black/80 mt-5"
-              >
-                View Pricing
-              </Button>
-            </Link>
+            <div className="flex gap-4 mt-5">
+              <Link href="/pricing">
+                <Button
+                  size="lg"
+                  className="w-40 py-4 gap-2 text-background bg-black/80 "
+                >
+                  View Pricing
+                </Button>
+              </Link>
+
+              <Link href="https://cal.com/deforge/sales" target="_blank">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="w-40 py-4 gap-2 border-black/50"
+                >
+                  Contact Sales
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </Container>

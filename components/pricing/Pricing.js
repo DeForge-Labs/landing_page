@@ -189,7 +189,16 @@ export default function PricingSection() {
 
               <div className="flex items-end">
                 <p className="text-5xl font-semibold">
-                  {tab === "month" ? "$29" : "$290"}
+                  {tab === "month" ? (
+                    "$29"
+                  ) : (
+                    <>
+                      <span>$290</span>
+                      <span className="line-through text-muted-foreground text-lg ml-0.5">
+                        $349
+                      </span>
+                    </>
+                  )}
                 </p>
                 <p className="text-muted-foreground text-sm mb-1">
                   {tab === "month" ? "/month" : "/year"}
@@ -326,6 +335,9 @@ export default function PricingSection() {
                 <Button
                   className="w-full py-3 z-20"
                   variant={plan.popular ? "default" : "outline"}
+                  onClick={() => {
+                    window.open("https://cal.com/deforge/sales", "_blank");
+                  }}
                 >
                   Contact Sales
                 </Button>
@@ -358,17 +370,19 @@ export default function PricingSection() {
               <thead>
                 <tr className="bg-black/5 border-b border-black/50">
                   <th className="p-4 md:p-6 font-semibold text-sm">Feature</th>
-                  <th className="p-4 md:p-6 font-bold text-sm bg-purple-50/50 flex items-center gap-2">
-                    <Image
-                      priority
-                      width={20}
-                      height={20}
-                      alt="Deforge Logo"
-                      src="/logo/logo-black.svg"
-                    />
-                    <span className="font-bold inline-block text-xl text-black">
-                      Deforge
-                    </span>
+                  <th className="p-4 md:p-6 font-bold text-sm  bg-purple-50/50 ">
+                    <div className="flex items-center gap-2 w-28">
+                      <Image
+                        priority
+                        width={20}
+                        height={20}
+                        alt="Deforge Logo"
+                        src="/logo/logo-black.svg"
+                      />
+                      <span className="font-bold inline-block text-xl text-black">
+                        Deforge
+                      </span>
+                    </div>
                   </th>
                   <th className="p-4 md:p-6 font-semibold text-sm opacity-60">
                     n8n / Langflow

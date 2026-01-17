@@ -250,7 +250,9 @@ const CTA = () => {
               ))}
             </div>
 
-            <p className="text-xs">© 2025 Deforge. All rights reserved.</p>
+            <p className="text-xs">
+              © 2026 Deforge Corp. <br /> All rights reserved
+            </p>
           </div>
 
           <div className="flex gap-10">
