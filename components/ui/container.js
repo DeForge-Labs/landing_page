@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-export default function Container({
+const Container = ({
   className,
   children,
   visiblytl = true,
@@ -8,12 +8,12 @@ export default function Container({
   visiblybr = true,
   visiblybl = true,
   showGlow = true,
-}) {
+}) => {
   return (
     <div
       className={cn(
         "container border border-dashed border-y-0 border-black/50 relative",
-        className
+        className,
       )}
     >
       {showGlow && (
@@ -52,4 +52,6 @@ export default function Container({
       {children}
     </div>
   );
-}
+};
+
+export default Container;

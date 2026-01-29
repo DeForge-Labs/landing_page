@@ -5,7 +5,7 @@ import { Check } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
-export default function Enterprise() {
+const Enterprise = () => {
   return (
     <section id="enterprise" className="border-b border-dashed border-black/50">
       <Container className="py-12! sm:p-20! p-4 flex flex-col" showGlow={false}>
@@ -76,4 +76,6 @@ export default function Enterprise() {
       </Container>
     </section>
   );
-}
+};
+
+export default Enterprise;

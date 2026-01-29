@@ -3,7 +3,7 @@ import Container from "../../ui/container";
 
 import FlowContainer from "./FlowContainer";
 
-export default function Editor() {
+const Editor = () => {
   return (
     <section
       id="use-cases"
@@ -35,4 +35,6 @@ export default function Editor() {
       </Container>
     </section>
   );
-}
+};
+
+export default Editor;
