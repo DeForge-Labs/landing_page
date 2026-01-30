@@ -4,6 +4,9 @@ import "./globals.css";
 
 import Script from "next/script";
 
+import CTA from "@/components/home/CTA";
+import Navbar from "@/components/home/navbar/Navbar";
+
 const lexendDeca = Lexend_Deca({
   subsets: ["latin"],
   weight: ["variable"],
@@ -71,7 +74,9 @@ export default function RootLayout({ children }) {
         className={`${lexendDeca.className} antialiased overflow-x-hidden light`}
         suppressHydrationWarning
       >
-        {children}
+        <Navbar />
+        <main className="flex-1 relative">{children}</main>
+        <CTA />
       </body>
 
       <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
