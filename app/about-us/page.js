@@ -10,7 +10,7 @@ import MediaSection from "@/components/about/MediaSection";
 
 const AboutUsPage = () => {
   return (
-    <main className="min-h-screen text-black font-sans">
+    <main className="min-h-screen text-black">
       <AboutHeader />
       <OurVision />
       <MediaSection />

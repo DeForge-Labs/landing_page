@@ -291,6 +291,10 @@ export default function PricingSection() {
                 High-end flexible workspaces for businesses requiring dedicated
                 infrastructure and custom AI node capabilities.
               </p>
+
+              <p className="text-xs text-black/50">
+                *Custom Pricing based on requirements
+              </p>
             </div>
           </div>
         </div>
@@ -329,7 +333,7 @@ export default function PricingSection() {
 
                 <div className="flex items-end z-20">
                   <p className="text-5xl font-semibold">${plan.price}</p>
-                  <p className="text-muted-foreground text-sm mb-1">/month</p>
+                  <p className="text-muted-foreground text-sm mb-1">/month*</p>
                 </div>
 
                 <Button
