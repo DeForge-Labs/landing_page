@@ -6,7 +6,8 @@ const HeaderTitle = ({ clockAnimate, shockAnimate }) => {
       <span className="flex items-center">
         Build and{" "}
         <Image
-          alt="Deforge visual drag-and-drop AI workflow editor"
+          alt=""
+          aria-hidden="true"
           width={60}
           height={60}
           src="/icons/shock.png"
@@ -21,7 +22,8 @@ const HeaderTitle = ({ clockAnimate, shockAnimate }) => {
       <span className="flex items-center -mt-6 sm:-mt-1">
         AI Agents in{" "}
         <Image
-          alt="Fast AI agent deployment icon"
+          alt=""
+          aria-hidden="true"
           width={60}
           height={60}
           src="/icons/stopwatch.png"
