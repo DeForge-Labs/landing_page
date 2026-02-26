@@ -1493,12 +1493,12 @@ export default function PrivacyPolicy() {
             </p>
 
             <div className="bg-secondary/30 p-6 rounded-xl border border-dashed border-black/30 w-fit">
-              <p className="mb-2 font-bold text-lg">Deforge</p>
+              <p className="mb-2 font-bold text-lg">Deforge Corp.</p>
 
               <div className="text-muted-foreground">
-                <p className="mb-1">Barrackpore</p>
-                <p className="mb-1">Kolkata, West Bengal 700120</p>
-                <p>India</p>
+                <p className="mb-1">228 Park Ave S, Pmb 85451</p>
+                <p className="mb-1">New York, NY, 10003</p>
+                <p>United States</p>
               </div>
             </div>
           </section>

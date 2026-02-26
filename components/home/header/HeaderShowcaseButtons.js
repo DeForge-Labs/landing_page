@@ -8,14 +8,14 @@ const items = [
     title: "Customer Support Agent",
     icon: "/icons/Chat.png",
     desc: "Spin up your own bot that can answer your customers about your product",
-    link: "#",
+    link: "https://d4g.app/qOgIxz",
   },
 
   {
     title: "Automated Job Search",
     icon: "/icons/Suitcase.png",
     desc: "Search for jobs based on your required job role and export them to an excel sheet",
-    link: "#",
+    link: "https://d4g.app/meb3iZ",
   },
 
   {

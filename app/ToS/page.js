@@ -19,9 +19,10 @@ const TermsOfService = () => {
             </h2>
 
             <p className="mb-4">
-              We are Deforge ("<strong>Company</strong>," "<strong>we</strong>,"
-              "<strong>us</strong>," "<strong>our</strong>"), a company
-              registered in India at Barrackpore, Kolkata, West Bengal 700120.
+              We are Deforge Corp.("<strong>Company</strong>," "
+              <strong>we</strong>," "<strong>us</strong>," "<strong>our</strong>
+              "), a company registered in the United States at 228 Park Ave S,
+              Pmb 85451, New York, NY, 10003.
             </p>
 
             <p className="mb-4">
@@ -46,9 +47,9 @@ const TermsOfService = () => {
             </p>
 
             <p className="mb-4">
-              You can contact us by phone at +916289347285, email at
-              contact@deforge.io, or by mail to Barrackpore, Kolkata, West
-              Bengal 700120, India.
+              You can contact us by phone at +91 6289347285, email at
+              contact@deforge.io, or by mail to 228 Park Ave S, Pmb 85451, New
+              York, NY, 10003, United States.
             </p>
 
             <p className="mb-4">
@@ -1462,11 +1463,11 @@ const TermsOfService = () => {
             </p>
 
             <div className="bg-secondary/30 p-6 rounded-xl border border-dashed border-black/30 w-fit">
-              <p className="mb-2 font-bold text-lg">Deforge</p>
+              <p className="mb-2 font-bold text-lg">Deforge Corp.</p>
               <div className="text-muted-foreground">
-                <p className="mb-1">Barrackpore</p>
-                <p className="mb-1">Kolkata, West Bengal 700120</p>
-                <p className="mb-1">India</p>
+                <p className="mb-1">228 Park Ave S, Pmb 85451</p>
+                <p className="mb-1">New York, NY, 10003</p>
+                <p className="mb-1">United States</p>
                 <p className="mb-1">Phone: +916289347285</p>
                 <p>
                   Email:{" "}
