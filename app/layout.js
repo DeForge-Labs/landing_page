@@ -14,12 +14,12 @@ const lexendDeca = Lexend_Deca({
 
 export const metadata = {
   title: "Deforge",
-  description: "AI Agents in One Click",
+  description: "Build and Deploy AI Agents in Minutes",
 
   metadataBase: new URL("https://deforge.io"),
 
   openGraph: {
-    title: "Deforge: AI Agents in One Click",
+    title: "Deforge: Build and Deploy AI Agents in Minutes",
     description:
       "Build your own AI Agents without writing a single line of code. Simply chat to build your agent and deploy it in minutes.",
     url: "https://deforge.io",
@@ -37,7 +37,7 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Deforge: AI Agents in One Click",
+    title: "Deforge: Build and Deploy AI Agents in Minutes",
     description:
       "Build your own AI Agents without writing a single line of code. Simply chat to build your agent and deploy it in minutes.",
     images: ["/logo/Cover.jpg"],
@@ -51,7 +51,7 @@ export const metadata = {
         "@type": "Organization",
         "name": "Deforge",
         "url": "https://deforge.io",
-        "description": "AI Agents in One Click",
+        "description": "Build and Deploy AI Agents in Minutes",
         "logo": "https://deforge.io/logo/logo-black.svg",
         "sameAs": [
           "https://x.com/Deforge_io",
