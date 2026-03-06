@@ -14,13 +14,22 @@ import Container from "../ui/container";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "../ui/tabs";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Zap } from "lucide-react";
 import FeatureCard from "../home/features/FeatureCard";
 import Image from "next/image";
 
 export default function PricingSection() {
   const [tab, setTab] = useState("year");
+
+  useEffect(() => {
+    if (window.location.hash === "#enterprise") {
+      const element = document.getElementById("enterprise");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
 
   const enterprisePlans = [
     {
@@ -284,7 +293,7 @@ export default function PricingSection() {
           </div>
         </div>
 
-        <div className="text-center space-y-2">
+        <div id="enterprise" className="scroll-mt-24 text-center space-y-2">
           <div className="flex justify-between lg:flex-row flex-col gap-5 mt-10">
             <h1 className="text-4xl font-bold tracking-tighter lg:text-left text-center">
               Enterprise <br />
@@ -310,7 +319,7 @@ export default function PricingSection() {
               className={`rounded-md relative min-h-[450px] overflow-hidden border border-black/50 bg-background shadow-xl p-6 md:p-8 ${
                 plan.popular
                   ? "scale-105 shadow-purple-200 z-10"
-                  : "mt-3 lg:mt-0"
+                  : "mt-3 lg:mt-0 mb-3 lg:mb-0"
               }`}
             >
               <div className="flex flex-col gap-4">

@@ -128,6 +128,7 @@ const CTA = () => {
 
               <Link
                 href="https://docs.deforge.io"
+                target="_blank"
                 className="text-xs hover:underline"
               >
                 Documentation
@@ -155,6 +156,7 @@ const CTA = () => {
               <Link
                 href="https://x.com/deforge_io"
                 className="text-xs hover:underline"
+                target="_blank"
               >
                 X/Twitter
               </Link>
@@ -162,13 +164,23 @@ const CTA = () => {
               <Link
                 href="https://www.linkedin.com/company/deforgeio/"
                 className="text-xs hover:underline"
+                target="_blank"
               >
                 LinkedIn
               </Link>
 
               <Link
+                href="https://forum.deforge.io"
+                className="text-xs hover:underline"
+                target="_blank"
+              >
+                Forum
+              </Link>
+
+              <Link
                 href="https://github.com/DeForge-Labs"
                 className="text-xs hover:underline"
+                target="_blank"
               >
                 GitHub
               </Link>
@@ -176,6 +188,7 @@ const CTA = () => {
               <Link
                 href="https://www.youtube.com/@DeforgeIo"
                 className="text-xs hover:underline"
+                target="_blank"
               >
                 YouTube
               </Link>

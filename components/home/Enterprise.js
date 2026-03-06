@@ -64,7 +64,7 @@ export default function Enterprise() {
             </div>
 
             <div className="flex gap-4 mt-5">
-              <Link href="/pricing">
+              <Link href="/pricing#enterprise">
                 <Button
                   size="lg"
                   className="w-40 py-4 gap-2 text-background bg-black/80 "
