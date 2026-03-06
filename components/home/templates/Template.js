@@ -128,7 +128,14 @@ import TemplateCard from "./TemplateCard";
 
 const TEMPLATES = [
   {
-    icon: <Image src="/icons/chat3.png" alt="Logo" width={60} height={60} />,
+    icon: (
+      <Image
+        src="/icons/chat3.png"
+        alt="Chat Support icon"
+        width={60}
+        height={60}
+      />
+    ),
     embedded: true,
     title: "AI Customer Support Agent",
     description:
@@ -140,7 +147,7 @@ const TEMPLATES = [
     icon: (
       <Image
         src="/icons/chat3.png"
-        alt="Logo"
+        alt="Chat Support icon large"
         width={200}
         height={200}
         className="absolute bottom-5 right-5 w-30 h-30"
@@ -153,7 +160,14 @@ const TEMPLATES = [
   },
 
   {
-    icon: <Image src="/icons/job.png" alt="Logo" width={60} height={60} />,
+    icon: (
+      <Image
+        src="/icons/job.png"
+        alt="Job Search icon"
+        width={60}
+        height={60}
+      />
+    ),
     embedded: true,
     title: "Automated Job Search Alerter",
     description:
@@ -161,7 +175,14 @@ const TEMPLATES = [
   },
 
   {
-    icon: <Image src="/icons/news.png" alt="Logo" width={60} height={60} />,
+    icon: (
+      <Image
+        src="/icons/news.png"
+        alt="News Tweeter icon"
+        width={60}
+        height={60}
+      />
+    ),
     embedded: true,
     title: "Automated Daily News Tweeter",
     description:
@@ -169,7 +190,14 @@ const TEMPLATES = [
   },
 
   {
-    icon: <Image src="/icons/calender.png" alt="Logo" width={60} height={60} />,
+    icon: (
+      <Image
+        src="/icons/calender.png"
+        alt="Calendar Scheduler icon"
+        width={60}
+        height={60}
+      />
+    ),
     embedded: true,
     title: "Telegram Meeting Scheduler Bot",
     description:
@@ -180,7 +208,7 @@ const TEMPLATES = [
     icon: (
       <Image
         src="/icons/ai.png"
-        alt="Logo"
+        alt="AI Agents Gallery icon large"
         width={200}
         height={200}
         className="absolute bottom-5 right-5 w-30 h-30"
@@ -193,7 +221,14 @@ const TEMPLATES = [
   },
 
   {
-    icon: <Image src="/icons/mail.png" alt="Logo" width={60} height={60} />,
+    icon: (
+      <Image
+        src="/icons/mail.png"
+        alt="Email Summarizer icon"
+        width={60}
+        height={60}
+      />
+    ),
     embedded: true,
     title: "Gmail Summarizer to Telegram",
     description:
@@ -201,7 +236,14 @@ const TEMPLATES = [
   },
 
   {
-    icon: <Image src="/icons/book.png" alt="Logo" width={60} height={60} />,
+    icon: (
+      <Image
+        src="/icons/book.png"
+        alt="AI Tutor Book icon"
+        width={60}
+        height={60}
+      />
+    ),
     embedded: true,
     title: "AI Tutor",
     description:
@@ -209,7 +251,14 @@ const TEMPLATES = [
   },
 
   {
-    icon: <Image src="/icons/ai.png" alt="Logo" width={60} height={60} />,
+    icon: (
+      <Image
+        src="/icons/ai.png"
+        alt="AI Agents Gallery icon"
+        width={60}
+        height={60}
+      />
+    ),
     embedded: true,
     title: "Agent Gallery",
     description: "Explore our gallery of AI agents created by the community.",

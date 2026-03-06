@@ -34,10 +34,10 @@ const Header = () => {
             shockAnimate={shockAnimate}
           />
 
-          <h2 className="text-sm text-gray-600 max-w-lg -mt-6">
+          <p className="text-sm text-gray-600 max-w-lg -mt-6">
             Build your own AI Agents without writing a single line of code.
             Simply chat to build your agent and deploy it in minutes.
-          </h2>
+          </p>
 
           <div className="flex flex-col gap-3 items-center w-full">
             <HeaderInput placeholder={placeholder} />

@@ -15,8 +15,27 @@ const lexendDeca = Lexend_Deca({
 export const metadata = {
   title: "Deforge",
   description: "Build and Deploy AI Agents in Minutes",
+  keywords: [
+    "AI Agents",
+    "No-Code AI",
+    "Build AI Assistant",
+    "AI Workflows",
+    "Automation",
+    "Deforge",
+    "Deploy AI",
+  ],
+  authors: [{ name: "Deforge Team" }],
+  creator: "Deforge",
 
   metadataBase: new URL("https://deforge.io"),
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 
   openGraph: {
     title: "Deforge: Build and Deploy AI Agents in Minutes",
@@ -48,15 +67,27 @@ export const metadata = {
     "application/ld+json": `<script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "SoftwareApplication",
         "name": "Deforge",
         "url": "https://deforge.io",
-        "description": "Build and Deploy AI Agents in Minutes",
-        "logo": "https://deforge.io/logo/logo-black.svg",
-        "sameAs": [
-          "https://x.com/Deforge_io",
-          "https://twitter.com/Deforge_io",
-        ]
+        "description": "Build and Deploy AI Agents in Minutes without writing a single line of code.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Deforge",
+          "url": "https://deforge.io",
+          "logo": "https://deforge.io/logo/logo-black.svg",
+          "sameAs": [
+            "https://x.com/Deforge_io",
+            "https://twitter.com/Deforge_io"
+          ]
+        }
       }
     </script>`,
   },

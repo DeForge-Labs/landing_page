@@ -8,6 +8,7 @@ import {
   UsersRound,
   BriefcaseBusiness,
   Factory,
+  Plus,
 } from "lucide-react";
 import Container from "../ui/container";
 import { Button } from "../ui/button";
@@ -24,7 +25,7 @@ export default function PricingSection() {
   const enterprisePlans = [
     {
       name: "Tier 1",
-      price: 299,
+      price: 199,
       description: "Scalable automation for growing teams.",
       icon: BriefcaseBusiness,
       color: "from-emerald-300",
@@ -35,15 +36,15 @@ export default function PricingSection() {
         "8 TB Bandwidth",
         "60,000 Credits included",
         "5 Custom nodes included",
-        "Extra nodes at $9.99",
-        "Dedicated Support",
+        "Priority Support",
         "Custom SLA, SSO",
         "Custom Domain",
       ],
+      advantages: ["Extra nodes at $9.99", "Dedicated Dev at $100"],
     },
     {
       name: "Tier 2",
-      price: 499,
+      price: 399,
       description: "Advanced operations for high-demand agencies.",
       icon: Building2,
       color: "from-purple-300",
@@ -55,15 +56,15 @@ export default function PricingSection() {
         "16 TB Bandwidth",
         "130,000 Credits included",
         "10 Custom nodes included",
-        "Extra nodes at $9.99",
-        "Dedicated Support",
+        "Priority Support",
         "Custom SLA, SSO",
         "Custom Domain",
       ],
+      advantages: ["Extra nodes at $9.99", "Dedicated Dev at $100"],
     },
     {
       name: "Tier 3",
-      price: 599,
+      price: 499,
       description: "The ultimate power for enterprise-grade agents.",
       icon: Factory,
       color: "from-blue-300",
@@ -74,11 +75,11 @@ export default function PricingSection() {
         "32 TB Bandwidth",
         "200,000 Credits included",
         "20 Custom nodes included",
-        "Extra nodes at $9.99",
-        "Dedicated Support",
+        "Priority Support",
         "Custom SLA, SSO",
         "Custom Domain",
       ],
+      advantages: ["Extra nodes at $9.99", "Dedicated Dev at $100"],
     },
   ];
 
@@ -153,7 +154,8 @@ export default function PricingSection() {
               <ul className="space-y-2 text-sm opacity-50">
                 {[
                   "500 Credits One Time",
-                  "3 Apps",
+                  "Max 3 Apps",
+                  "Max 3 Files",
                   "Forum Support",
                   "Access to all features",
                 ].map((feature, j) => (
@@ -194,8 +196,9 @@ export default function PricingSection() {
                   ) : (
                     <>
                       <span>$290</span>
-                      <span className="line-through text-muted-foreground text-lg ml-0.5">
+                      <span className="relative text-muted-foreground text-lg ml-0.5">
                         $349
+                        <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-0.5 w-full bg-red-500"></span>
                       </span>
                     </>
                   )}
@@ -218,6 +221,7 @@ export default function PricingSection() {
                 {[
                   "10000 Credits",
                   "Unlimited Apps",
+                  "Unlimited Files",
                   "Priority Support",
                   "Access to all features",
                 ].map((feature, j) => (
@@ -351,6 +355,15 @@ export default function PricingSection() {
                     <li key={j} className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-primary flex-shrink-0" />
                       <span>{feature}</span>
+                    </li>
+                  ))}
+                  {plan.advantages.map((advantage, j) => (
+                    <li
+                      key={j}
+                      className="flex items-center text-purple-600 gap-2"
+                    >
+                      <Plus className="h-4 w-4 flex-shrink-0" />
+                      <span>{advantage}</span>
                     </li>
                   ))}
                 </ul>

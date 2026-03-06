@@ -13,7 +13,14 @@ const SOCIAL_LINKS = [
   },
   {
     href: "https://x.com/deforge_io",
-    icon: <Image src="/logo/x-logo.png" alt="X Logo" width={14} height={14} />,
+    icon: (
+      <Image
+        src="/logo/x-logo.png"
+        alt="X (formerly Twitter) Logo"
+        width={14}
+        height={14}
+      />
+    ),
   },
   {
     href: "https://github.com/DeForge-Labs",
@@ -31,7 +38,7 @@ const SOCIAL_LINKS = [
 
 const CTA = () => {
   return (
-    <section className="bg-black text-primary-foreground relative overflow-hidden">
+    <footer className="bg-black text-primary-foreground relative overflow-hidden">
       <Container
         className="text-center md:text-left flex py-20! sm:px-20! px-4! flex-col items-center md:items-start justify-between relative pb-36 md:pb-56 md:gap-y-8 gap-6 border-white!"
         visiblytl={false}
@@ -44,7 +51,7 @@ const CTA = () => {
         <div className="w-2 h-2 bg-white absolute -top-1 -right-[4.5px] rotate-45"></div>
 
         <Image
-          alt="Logo"
+          alt="Deforge White Logo"
           width={400}
           height={400}
           src="/logo/logo-white.svg"
@@ -60,7 +67,7 @@ const CTA = () => {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between w-full items-center md:items-end gap-10 md:gap-0 mt-10 md:mt-0">
+        <div className="flex flex-col md:flex-row justify-between w-full items-center md:items-end gap-10 md:gap-0 mt-10 md:mt-0 z-50">
           <div className="flex flex-col gap-2 items-center md:items-start">
             <div className="flex gap-2">
               {SOCIAL_LINKS.map((s, i) => (
@@ -176,7 +183,7 @@ const CTA = () => {
           </div>
         </div>
       </Container>
-    </section>
+    </footer>
   );
 };
 
