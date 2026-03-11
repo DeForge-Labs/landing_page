@@ -4,7 +4,7 @@ const ProductHuntBadge = () => (
   <Link
     target="_blank"
     rel="noopener noreferrer"
-    href="https://www.producthunt.com/products/deforge-open-beta?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_source=badge-deforge"
+    href="https://www.producthunt.com/products/deforge-open-beta/launches?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_source=badge-deforge"
   >
     <img
       width={220}
