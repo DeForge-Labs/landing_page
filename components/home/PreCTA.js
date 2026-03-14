@@ -11,7 +11,7 @@ const PreCTA = () => {
   };
 
   const handleBrowse = () => {
-    window.open("https://app.deforge.io/templates", "_blank");
+    window.open("/agents");
   };
 
   return (
