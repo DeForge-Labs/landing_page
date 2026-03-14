@@ -9,6 +9,7 @@ const items = [
     icon: "/icons/Chat.png",
     desc: "Spin up your own bot that can answer your customers about your product",
     link: "https://d4g.app/qOgIxz",
+    target: "_blank",
   },
 
   {
@@ -16,13 +17,15 @@ const items = [
     icon: "/icons/Suitcase.png",
     desc: "Search for jobs based on your required job role and export them to an excel sheet",
     link: "https://d4g.app/meb3iZ",
+    target: "_blank",
   },
 
   {
     title: "Agent Library",
     icon: "/icons/Folder.png",
     desc: "Use pre-built agents to get started and deploy simply by filling a form",
-    link: "https://app.deforge.io/templates",
+    link: "/agents",
+    target: "_self",
   },
 ];
 
@@ -33,7 +36,7 @@ const HeaderShowcaseButtons = () => {
         <Link
           href={item.link}
           key={item.title}
-          target="_blank"
+          target={item.target}
           className="flex-1 w-full"
         >
           <Button

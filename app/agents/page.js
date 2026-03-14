@@ -1,20 +1,20 @@
-import PricingSection from "@/components/pricing/Pricing";
+import AgentSection from "@/components/agents/AgentSection";
 
 export async function generateMetadata() {
   return {
-    title: "Pricing | Deforge",
+    title: "Best AI Agents & Templates | Deforge",
     description: `Discover top-rated AI agents. Clone and deploy powerful automation workflows in seconds with Deforge.`,
     keywords: ["AI Agents", "Workflows", "Automation Templates"],
     openGraph: {
-      title: `Pricing`,
+      title: `AI Agents`,
       description: `Explore and deploy AI agents.`,
-      images: ["/logo/Pricing.jpg"],
+      images: ["/logo/Agents.jpg"],
     },
   };
 }
 
-const Pricing = () => {
-  return <PricingSection />;
+const Agent = ({ searchParams }) => {
+  return <AgentSection searchParams={searchParams} />;
 };
 
-export default Pricing;
+export default Agent;

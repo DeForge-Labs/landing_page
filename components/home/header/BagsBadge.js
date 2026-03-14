@@ -7,7 +7,7 @@ const BagsBadge = () => (
     href="https://bags.fm/ozDZyTuz9EvxBc8s9Huc8kCzCPcrQ1tCwJaQXMbBAGS"
   >
     <img
-      width={230}
+      width={220}
       height={48}
       alt="Live on Bags.fm"
       src="https://bagsbadge.deforge.io/v1/badge.svg?address=ozDZyTuz9EvxBc8s9Huc8kCzCPcrQ1tCwJaQXMbBAGS&theme=dark"

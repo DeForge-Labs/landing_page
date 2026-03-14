@@ -13,9 +13,9 @@ import NavButton from "./NavButton";
 
 const navLinks = [
   {
-    href: "https://app.deforge.io/templates",
+    href: "/agents",
     label: "Agents",
-    isExternal: true,
+    isExternal: false,
   },
   {
     href: "https://forum.deforge.io",
@@ -38,7 +38,7 @@ const Navbar = () => {
       router.push(href);
       closeMenu();
     },
-    [router, closeMenu]
+    [router, closeMenu],
   );
 
   const goToExternal = useCallback(
@@ -46,14 +46,14 @@ const Navbar = () => {
       window.open(url, "_blank");
       closeMenu();
     },
-    [closeMenu]
+    [closeMenu],
   );
 
   const handleClick = useCallback(
     (href, isExternal) => {
       isExternal ? goToExternal(href) : goToInternal(href);
     },
-    [goToInternal, goToExternal]
+    [goToInternal, goToExternal],
   );
 
   return (
