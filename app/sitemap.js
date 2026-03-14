@@ -1,5 +1,8 @@
 import { generateCategorySlug } from "@/lib/utils";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 3600;
+
 const categoryList = [
   "General",
   "Customer Support",
@@ -44,21 +47,29 @@ export default async function sitemap() {
     const response = await fetch(
       `https://api.deforge.io/api/template/global?limit=1000`,
       {
-        next: { revalidate: 3600 },
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          "User-Agent": "DeforgeSitemapGenerator/1.0",
+        },
+        cache: "no-store",
       },
     );
+
     const data = await response.json();
 
     if (data?.success && data?.templates) {
-      agentRoutes = data.templates.map((template) => ({
-        url: `${baseUrl}/agents/${template.slug}`,
-        lastModified: new Date(template.updatedAt || new Date()),
-        changeFrequency: "weekly",
-        priority: 0.6,
-      }));
+      agentRoutes = data.templates
+        .filter((t) => t.slug)
+        .map((template) => ({
+          url: `${baseUrl}/agents/${template.slug}`,
+          lastModified: new Date(template.updatedAt || new Date()),
+          changeFrequency: "weekly",
+          priority: 0.6,
+        }));
     }
   } catch (error) {
-    console.error("Sitemap fetch error:", error);
+    console.error("Sitemap API Fetch Failed:", error);
   }
 
   const externalRoutes = [
