@@ -27,7 +27,7 @@ export async function generateMetadata({ params }) {
     description: `Discover top-rated AI agents for ${officialName}. Clone and deploy powerful automation workflows in seconds with Deforge.`,
     keywords: [officialName, "AI Agents", "Workflows", "Automation Templates"],
     alternates: {
-      canonical: `https://deforge.io/agents/categories/${decodedCategorySlug}`,
+      canonical: `https://deforge.io/agents/categories/${decodedCategory}`,
     },
     openGraph: {
       title: `${officialName} AI Agents`,

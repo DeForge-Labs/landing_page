@@ -10,7 +10,7 @@ export async function generateMetadata() {
     },
     openGraph: {
       title: `AI Agents`,
-      description: `Explore and deploy AI agents.`,
+      description: `Discover top-rated AI agents. Clone and deploy powerful automation workflows in seconds with Deforge.`,
       images: ["/logo/Agents.jpg"],
     },
   };

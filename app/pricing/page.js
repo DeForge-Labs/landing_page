@@ -3,11 +3,14 @@ import PricingSection from "@/components/pricing/Pricing";
 export async function generateMetadata() {
   return {
     title: "Pricing | Deforge",
-    description: `Discover top-rated AI agents. Clone and deploy powerful automation workflows in seconds with Deforge.`,
+    description: `Affordable and flexible pricing plans for everyone.`,
     keywords: ["AI Agents", "Workflows", "Automation Templates"],
+    alternates: {
+      canonical: "https://deforge.io/pricing",
+    },
     openGraph: {
       title: `Pricing`,
-      description: `Explore and deploy AI agents.`,
+      description: `Affordable and flexible pricing plans for everyone.`,
       images: ["/logo/Pricing.jpg"],
     },
   };
