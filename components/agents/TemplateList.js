@@ -16,12 +16,6 @@ export default async function TemplateList({ page, query, category }) {
         .map((cookie) => `${cookie.name}=${cookie.value}`)
         .join("; ");
 
-      console.log(
-        `${
-          process.env.NEXT_PUBLIC_API_URL || process.env.API_URL
-        }/template/global${category ? `/${category}` : ""}?page=${page || 1}&query=${query || ""}&limit=12`,
-      );
-
       const response = await fetch(
         `${
           process.env.NEXT_PUBLIC_API_URL || process.env.API_URL
