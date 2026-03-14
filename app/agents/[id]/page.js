@@ -34,11 +34,12 @@ export async function generateMetadata({ params }) {
     return { title: "Agent Not Found | Deforge" };
   }
 
-  const { name, category, slug } = templateData.template;
+  const { name, category, slug, totalClones } = templateData.template;
 
-  const ogImageUrl = new URL(`${process.env.NEXT_PUBLIC_APP_URL}/api/og`);
+  const ogImageUrl = new URL(`${process.env.NEXT_PUBLIC_API_URL}/og/template`);
   ogImageUrl.searchParams.set("title", name);
   ogImageUrl.searchParams.set("category", category);
+  ogImageUrl.searchParams.set("clones", totalClones || 0);
 
   return {
     title: `${name} - AI Agent Template | Deforge`,
