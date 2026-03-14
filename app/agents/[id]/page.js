@@ -53,6 +53,9 @@ export async function generateMetadata({ params }) {
         },
       ],
     },
+    alternates: {
+      canonical: `https://deforge.io/agents/${slug}`,
+    },
     twitter: {
       card: "summary_large_image",
       images: [ogImageUrl.toString()],
