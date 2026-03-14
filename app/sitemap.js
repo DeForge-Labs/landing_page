@@ -42,7 +42,7 @@ export default async function sitemap() {
   let agentRoutes = [];
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/template/global?limit=1000`,
+      `https://api.deforge.io/api/template/global?limit=1000`,
       {
         next: { revalidate: 3600 },
       },
