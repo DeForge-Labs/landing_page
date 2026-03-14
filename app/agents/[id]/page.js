@@ -36,10 +36,7 @@ export async function generateMetadata({ params }) {
 
   const { name, category, slug, totalClones } = templateData.template;
 
-  const ogImageUrl = new URL(`${process.env.NEXT_PUBLIC_API_URL}/og/template`);
-  ogImageUrl.searchParams.set("title", name);
-  ogImageUrl.searchParams.set("category", category);
-  ogImageUrl.searchParams.set("clones", totalClones || 0);
+  const ogImageUrl = `${process.env.NEXT_PUBLIC_API_URL}/og/template?title=${name}&category=${category}&clones=${totalClones}`;
 
   return {
     title: `${name} - AI Agent Template | Deforge`,
@@ -48,7 +45,7 @@ export async function generateMetadata({ params }) {
       title: name,
       images: [
         {
-          url: ogImageUrl.toString(),
+          url: ogImageUrl,
           width: 1200,
           height: 630,
         },
@@ -59,7 +56,7 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: "summary_large_image",
-      images: [ogImageUrl.toString()],
+      images: [ogImageUrl],
     },
   };
 }
