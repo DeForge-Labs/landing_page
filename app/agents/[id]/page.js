@@ -50,6 +50,7 @@ export async function generateMetadata({ params }) {
           height: 630,
         },
       ],
+      tags: [...name.split(" "), "AI Agent", "Template", "Deforge", category],
     },
     alternates: {
       canonical: `https://deforge.io/agents/${slug}`,
