@@ -8,7 +8,7 @@ const items = [
     title: "Customer Support Agent",
     icon: "/icons/Chat.png",
     desc: "Spin up your own bot that can answer your customers about your product",
-    link: "https://d4g.app/qOgIxz",
+    link: "https://deforge.io/agents/customer-support-agent-rg",
     target: "_blank",
   },
 
@@ -16,7 +16,7 @@ const items = [
     title: "Automated Job Search",
     icon: "/icons/Suitcase.png",
     desc: "Search for jobs based on your required job role and export them to an excel sheet",
-    link: "https://d4g.app/meb3iZ",
+    link: "https://deforge.io/agents/automated-job-finder-of",
     target: "_blank",
   },
 
