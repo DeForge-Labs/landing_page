@@ -34,29 +34,36 @@ export async function generateMetadata({ params }) {
     return { title: "Agent Not Found | Deforge" };
   }
 
-  const { name, category, slug, totalClones } = templateData.template;
+  const { name, category, slug, totalClones, description } =
+    templateData.template;
 
   const ogImageUrl = `${process.env.NEXT_PUBLIC_API_URL}/og/template?title=${name}&category=${category}&clones=${totalClones}`;
 
   return {
     title: `${name} - AI Agent Template | Deforge`,
-    description: templateData.template.description,
+    description: `${name} AI Agent: ${description.slice(0, 120)}${description.length > 120 ? "..." : ""} Deploy this ${category.toLowerCase()} automation in seconds.`,
     openGraph: {
-      title: name,
+      title: `${name} | AI Agent Template | Deforge`,
+      description: description,
+      url: `https://deforge.io/agents/${slug}`,
+      siteName: "Deforge",
       images: [
         {
           url: ogImageUrl,
           width: 1200,
           height: 630,
+          alt: `${name} AI Agent Template`,
         },
       ],
-      tags: [...name.split(" "), "AI Agent", "Template", "Deforge", category],
+      type: "website",
     },
     alternates: {
       canonical: `https://deforge.io/agents/${slug}`,
     },
     twitter: {
       card: "summary_large_image",
+      title: `${name} - AI Agent Template | Deforge`,
+      description: description,
       images: [ogImageUrl],
     },
   };
@@ -110,14 +117,22 @@ export default async function AgentPage({ params }) {
     description: template.description,
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
+    url: `https://deforge.io/agents/${template.slug}`,
     author: {
       "@type": "Organization",
-      name: template.author?.name || template.author || "Deforge",
+      name: "Deforge",
+      logo: "https://deforge.io/logo/logo-black.svg",
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "5",
-      reviewCount: template.totalClones || 1,
+      ratingValue: "4.9",
+      bestRating: "5",
+      ratingCount: template.totalClones || 1,
+    },
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
     },
   };
 

@@ -13,8 +13,9 @@ const lexendDeca = Lexend_Deca({
 });
 
 export const metadata = {
-  title: "Deforge",
-  description: "Build and Deploy AI Agents in Minutes",
+  title: "Deforge: AI Agents and Automations in Minutes",
+  description:
+    "AI Agents and automations built in minutes. Deforge lets you build and deploy powerful AI workflows without writing a single line of code.",
   keywords: [
     "AI Agents",
     "No-Code AI",
@@ -38,9 +39,9 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "Deforge: Build and Deploy AI Agents in Minutes",
+    title: "Deforge: AI Agents and Automations in Minutes",
     description:
-      "Build your own AI Agents without writing a single line of code. Simply chat to build your agent and deploy it in minutes.",
+      "AI Agents and automations built in minutes. Deforge lets you build and deploy powerful AI workflows without writing a single line of code.",
     url: "https://deforge.io",
     siteName: "Deforge",
     type: "website",
@@ -56,9 +57,9 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Deforge: Build and Deploy AI Agents in Minutes",
+    title: "Deforge: AI Agents and Automations in Minutes",
     description:
-      "Build your own AI Agents without writing a single line of code. Simply chat to build your agent and deploy it in minutes.",
+      "AI Agents and automations built in minutes. Deforge lets you build and deploy powerful AI workflows without writing a single line of code.",
     images: ["/logo/Cover.jpg"],
     creator: "@Deforge_io",
   },
@@ -70,7 +71,7 @@ export const metadata = {
         "@type": "SoftwareApplication",
         "name": "Deforge",
         "url": "https://deforge.io",
-        "description": "Build and Deploy AI Agents in Minutes without writing a single line of code.",
+        "description": "AI Agents and automations built in minutes. Deforge lets you build and deploy powerful AI workflows without writing a single line of code.",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Web",
         "offers": {

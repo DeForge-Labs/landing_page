@@ -12,21 +12,21 @@ const Teams = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <FounderCard
-            role="CEO"
+            role="Co-Founder & CEO"
             name="Anoy Roy Chowdhury"
             img="/founders/anoy.jpeg"
             linkedin="https://www.linkedin.com/in/anoyroyc3545/"
           />
 
           <FounderCard
-            role="CTO"
+            role="Co-Founder & CTO"
             name="Shamba Chowdhury"
             img="/founders/shamba.jpeg"
             linkedin="https://www.linkedin.com/in/shambac/"
           />
 
           <FounderCard
-            role="CMO"
+            role="Co-Founder & Founding Engineer"
             name="Gautam Raj"
             img="/founders/gautam.jpeg"
             linkedin="https://www.linkedin.com/in/-gautam-raj/"

@@ -3,11 +3,12 @@ import { Check, Target } from "lucide-react";
 
 import { Badge } from "../ui/badge";
 import Container from "../ui/container";
+import Image from "next/image";
 
 const OurVision = () => {
   return (
     <section className="border-b border-dashed bg-background border-black/50">
-      <Container className="py-16 md:py-24 px-4 sm:px-20">
+      <Container className="py-16 md:py-24 px-4! sm:px-20!">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>
             <Badge className="bg-secondary border border-black/50 text-black/50 px-3 py-1 rounded-xl mb-4">
@@ -41,7 +42,14 @@ const OurVision = () => {
             <div className="absolute -inset-4 bg-linear-to-r from-blue-100 to-purple-100 rounded-xl opacity-50 -z-10 blur-xl" />
 
             <div className="bg-background border border-black/50 p-8 rounded-xl shadow-sm">
-              <Target className="w-10 h-10 mb-4 text-purple-600" />
+              <Image
+                src="/logo/Deforge.png"
+                alt="Logo"
+                width={50}
+                height={50}
+                className="shadow-md shadow-[#8754ff] rounded-xl mb-6"
+                aria-hidden
+              />
 
               <h3 className="text-xl font-bold mb-2">The Deforge Difference</h3>
 

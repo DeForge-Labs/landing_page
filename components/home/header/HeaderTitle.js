@@ -2,8 +2,11 @@ import Image from "next/image";
 
 const HeaderTitle = ({ clockAnimate, shockAnimate }) => {
   return (
-    <h1 className="text-2xl sm:text-5xl font-bold tracking-tighter max-w-3xl flex flex-col items-center">
-      <span className="flex items-center">
+    <h1
+      className="text-2xl sm:text-5xl font-bold tracking-tighter max-w-3xl flex flex-col items-center"
+      aria-label="Build and Deploy AI Agents and Automations in minutes"
+    >
+      <span className="flex items-center" aria-hidden="true">
         Build and{" "}
         <Image
           alt=""
@@ -19,7 +22,7 @@ const HeaderTitle = ({ clockAnimate, shockAnimate }) => {
         Deploy
       </span>
 
-      <span className="flex items-center -mt-6 sm:-mt-1">
+      <span className="flex items-center -mt-6 sm:-mt-1" aria-hidden="true">
         AI Agents in{" "}
         <Image
           alt=""

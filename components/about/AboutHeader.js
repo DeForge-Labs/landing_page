@@ -26,7 +26,9 @@ const AboutHeader = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Build AI Agents Visually, No Code Required.
+            Deforge is a no-code platform that allows you to build and deploy AI
+            Agents and Automations without writing a single line of code. Simply
+            chat to build your agent and deploy it in minutes.
           </p>
         </div>
       </Container>
