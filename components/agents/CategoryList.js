@@ -19,6 +19,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import { generateCategorySlug } from "@/lib/utils";
+import Link from "next/link";
 
 const categoryList = [
   { label: "General", value: "General", icon: LayoutGrid },
@@ -65,15 +66,6 @@ export default function CategoryList() {
   );
   const currentCategory = currentCategoryObj ? currentCategoryObj.value : "";
 
-  const handleCategoryClick = (categoryValue) => {
-    if (currentCategory === categoryValue) {
-      router.push("/agents");
-    } else {
-      const slug = generateCategorySlug(categoryValue);
-      router.push(`/agents/categories/${slug}`);
-    }
-  };
-
   const initialCount = 3;
   const visibleCategories = isExpanded
     ? categoryList
@@ -87,27 +79,34 @@ export default function CategoryList() {
       >
         <AnimatePresence>
           {visibleCategories.map((cat, index) => (
-            <motion.button
-              layout
+            <Link
               key={cat.value}
-              onClick={() => handleCategoryClick(cat.value)}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.2 }}
-              className={`flex items-center gap-2 px-4 py-2 cursor-pointer rounded-sm border text-sm transition-colors whitespace-nowrap ${
+              href={
                 currentCategory === cat.value
-                  ? "bg-foreground/90 text-background border-foreground"
-                  : "bg-background border-foreground/15 hover:bg-foreground/5 hover:border-foreground/30"
-              } ${
-                !isExpanded && index === 2 ? "hidden md:flex" : ""
-              } ${!isExpanded && index === 1 ? "hidden sm:flex" : ""}`}
+                  ? "/agents"
+                  : `/agents/categories/${generateCategorySlug(cat.value)}`
+              }
             >
-              <cat.icon
-                className={`w-4 h-4 ${currentCategory === cat.value ? "text-background" : "text-muted-foreground"}`}
-              />
-              <span>{cat.label}</span>
-            </motion.button>
+              <motion.button
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.2 }}
+                className={`flex items-center gap-2 px-4 py-2 cursor-pointer rounded-sm border text-sm transition-colors whitespace-nowrap ${
+                  currentCategory === cat.value
+                    ? "bg-foreground/90 text-background border-foreground"
+                    : "bg-background border-foreground/15 hover:bg-foreground/5 hover:border-foreground/30"
+                } ${
+                  !isExpanded && index === 2 ? "hidden md:flex" : ""
+                } ${!isExpanded && index === 1 ? "hidden sm:flex" : ""}`}
+              >
+                <cat.icon
+                  className={`w-4 h-4 ${currentCategory === cat.value ? "text-background" : "text-muted-foreground"}`}
+                />
+                <span>{cat.label}</span>
+              </motion.button>
+            </Link>
           ))}
         </AnimatePresence>
 
