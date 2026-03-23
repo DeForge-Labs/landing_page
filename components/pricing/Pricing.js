@@ -43,7 +43,7 @@ export default function PricingSection() {
         "8 GB RAM",
         "100 GB NVMe disk space",
         "8 TB Bandwidth",
-        "60,000 Credits included",
+        "40,000 Credits included",
         "5 Custom nodes included",
         "Priority Support",
         "Custom SLA, SSO",
@@ -53,7 +53,7 @@ export default function PricingSection() {
     },
     {
       name: "Tier 2",
-      price: 399,
+      price: 299,
       description: "Advanced operations for high-demand agencies.",
       icon: Building2,
       color: "from-purple-300",
@@ -63,7 +63,7 @@ export default function PricingSection() {
         "16 GB RAM",
         "200 GB NVMe disk space",
         "16 TB Bandwidth",
-        "130,000 Credits included",
+        "100,000 Credits included",
         "10 Custom nodes included",
         "Priority Support",
         "Custom SLA, SSO",
@@ -73,7 +73,7 @@ export default function PricingSection() {
     },
     {
       name: "Tier 3",
-      price: 499,
+      price: 399,
       description: "The ultimate power for enterprise-grade agents.",
       icon: Factory,
       color: "from-blue-300",
@@ -356,7 +356,7 @@ export default function PricingSection() {
                     window.open("https://cal.com/deforge/sales", "_blank");
                   }}
                 >
-                  Contact Sales
+                  Book Demo
                 </Button>
 
                 <ul className="space-y-2 text-sm opacity-70 z-20">

@@ -14,11 +14,43 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
+const categoryContent = {
+  General:
+    "Versatile AI agents and automation templates designed to handle everyday tasks, streamline workflows, and boost overall efficiency.",
+  "Customer Support":
+    "Resolve tickets faster and improve satisfaction with 24/7 Customer Support AI Agents. Deploy automated helpdesk workflows in seconds.",
+  "Career & Job Search":
+    "Automate resume tailoring, interview prep, and job application tracking with our Career & Job Search AI templates.",
+  "Social Media Automation":
+    "Schedule posts, analyze trends, and engage with your audience on autopilot using these Social Media Automation agents.",
+  Productivity:
+    "Eliminate busywork. Clone these Productivity AI agents to manage your calendar, summarize emails, and organize your daily tasks.",
+  "Content Creation":
+    "Overcome writer's block with Content Creation agents. Automate blog writing, copywriting, and research workflows effortlessly.",
+  Ecommerce:
+    "Scale your online store with Ecommerce AI agents that handle inventory updates, product descriptions, and cart recovery.",
+  "Social Media & Marketing":
+    "Drive more conversions with marketing agents built for ad copy generation, campaign analysis, and lead scoring.",
+  Utilities:
+    "Essential utility agents to connect APIs, format data, and automate repetitive backend tasks without writing code.",
+  "Audio & Content Creation":
+    "Streamline your podcasting and video production with AI agents that transcribe, edit, and summarize audio content.",
+  Misc: "Explore unique and specialized AI agents built by the Deforge community for niche automation workflows.",
+  Programming:
+    "Automate code reviews, bug tracking, and algorithmic problem solving. Supercharge your development workflow with Programming AI agents.",
+};
+
 export default async function AgentSection({ searchParams, category }) {
   const params = await searchParams;
   const page = params?.p || 1;
   const query = params?.q || "";
   const activeCategory = category;
+
+  const pageTitle = activeCategory ? `${activeCategory} Agents` : "Agents";
+  const pageDescription =
+    activeCategory && categoryContent[activeCategory]
+      ? categoryContent[activeCategory]
+      : "Explore our curated collection of pre-built AI agents and templates created by the Deforge community.";
 
   return (
     <Container className="pb-20 md:pb-16 !px-4 sm:!px-20 gap-16 flex flex-col min-h-screen">
@@ -47,27 +79,32 @@ export default async function AgentSection({ searchParams, category }) {
           </BreadcrumbList>
         </Breadcrumb>
       </nav>
+
       <div className="flex flex-col items-center justify-center z-10 py-24 relative w-full">
         <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#DFE0E8_1.2px,transparent_1px)] bg-[size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_60%,transparent_100%)]"></div>
+
         <div className="relative mb-6 flex items-center gap-2">
-          <Image
-            src="/logo/Deforge.png"
-            alt="Logo"
-            width={35}
-            height={35}
-            className="shadow-md shadow-[#8754ff] rounded-md"
-            aria-hidden
-          />
-          <h1 className="text-4xl font-bold text-center">
-            Agents <span className="hidden">Marketplace</span>{" "}
-          </h1>
-          <div className="text-xs absolute top-9 right-0">
-            by <span className="font-bold">Deforge</span>
-          </div>
+          {!activeCategory && (
+            <Image
+              src="/logo/Deforge.png"
+              alt="Logo"
+              width={35}
+              height={35}
+              className="shadow-md shadow-[#8754ff] rounded-md"
+              aria-hidden
+            />
+          )}
+
+          <h1 className="text-4xl font-bold text-center">{pageTitle}</h1>
+          {!activeCategory && (
+            <div className="text-xs absolute top-9 right-0">
+              by <span className="font-bold">Deforge</span>
+            </div>
+          )}
         </div>
+
         <p className="text-md text-gray-600 max-w-xl text-center mb-5">
-          Explore our curated collection of pre-built AI agents and templates
-          created by the Deforge community.
+          {pageDescription}
         </p>
 
         <AgentCarousel />

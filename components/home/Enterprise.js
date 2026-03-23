@@ -18,7 +18,7 @@ export default function Enterprise() {
             </Badge>
 
             <h2 className="text-2xl lg:text-4xl font-bold text-center lg:text-left">
-              Deforge for Enterprise
+              Automation Software <br /> Cum Agency
             </h2>
 
             <p className="text-muted-foreground text-sm max-w-2xl mx-auto mb-3 text-center lg:text-left">
@@ -79,7 +79,7 @@ export default function Enterprise() {
                   variant="outline"
                   className="w-40 py-4 gap-2 border-black/50"
                 >
-                  Contact Sales
+                  Book a Demo
                 </Button>
               </Link>
             </div>

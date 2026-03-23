@@ -42,36 +42,6 @@ export default async function sitemap() {
     priority: 0.7,
   }));
 
-  let agentRoutes = [];
-  try {
-    const response = await fetch(
-      `https://api.deforge.io/api/template/global?limit=1000`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          "User-Agent": "DeforgeSitemapGenerator/1.0",
-        },
-        cache: "no-store",
-      },
-    );
-
-    const data = await response.json();
-
-    if (data?.success && data?.templates) {
-      agentRoutes = data.templates
-        .filter((t) => t.slug)
-        .map((template) => ({
-          url: `${baseUrl}/agents/${template.slug}`,
-          lastModified: new Date(template.updatedAt || new Date()),
-          changeFrequency: "weekly",
-          priority: 0.6,
-        }));
-    }
-  } catch (error) {
-    console.error("Sitemap API Fetch Failed:", error);
-  }
-
   const externalRoutes = [
     "https://app.deforge.io/templates",
     "https://status.deforge.io",
@@ -84,10 +54,5 @@ export default async function sitemap() {
     priority: 0.5,
   }));
 
-  return [
-    ...staticRoutes,
-    ...categoryRoutes,
-    ...agentRoutes,
-    ...externalRoutes,
-  ];
+  return [...staticRoutes, ...categoryRoutes, ...externalRoutes];
 }
