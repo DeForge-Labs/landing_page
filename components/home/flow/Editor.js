@@ -10,6 +10,7 @@ export default function Editor() {
       className="border-b border-dashed border-black/50 hidden sm:block"
     >
       <Container className="pt-20 pb-5 px-0!">
+        <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#DFE0E8_1.2px,transparent_1px)] bg-[size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_40%,transparent_100%)]"></div>
         <div className="text-center space-y-2">
           <Badge className="bg-secondary border border-black/50 text-black/50 px-3 py-1 rounded-xl">
             How it Works

@@ -18,6 +18,11 @@ const navLinks = [
     isExternal: false,
   },
   {
+    href: "https://runanvil.com",
+    label: "Anvil",
+    isExternal: true,
+  },
+  {
     href: "https://forum.deforge.io",
     label: "Forum",
     isExternal: true,

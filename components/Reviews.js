@@ -405,7 +405,7 @@ export default function Reviews() {
       setTimeout(() => {
         setDisplayedReviews((prev) => {
           const available = REVIEWS.filter(
-            (r) => !prev.some((p) => p.title === r.title)
+            (r) => !prev.some((p) => p.title === r.title),
           );
 
           if (available.length === 0) return prev;
@@ -453,7 +453,7 @@ export default function Reviews() {
               }}
             >
               <blockquote className="h-full">
-                <div className="rounded-xl shadow-md bg-secondary flex flex-col justify-between h-full gap-4 p-6">
+                <div className="rounded-xl bg-secondary/70 border border-black/10 shadow-md flex flex-col justify-between h-full gap-4 p-6">
                   <div>
                     <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
 

@@ -41,8 +41,8 @@ function TemplateCard({
   return (
     <div
       className={cn(
-        "rounded-xl bg-secondary p-6 shadow-md hover:shadow-md transition-shadow relative z-10",
-        className
+        "rounded-xl bg-secondary/70 border border-black/10 p-6 shadow-md hover:shadow-md transition-shadow relative z-10",
+        className,
       )}
     >
       {embedded ? (

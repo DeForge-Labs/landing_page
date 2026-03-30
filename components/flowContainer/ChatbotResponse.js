@@ -7,7 +7,7 @@ export default function ChatbotResponse() {
   return (
     <div className="w-64 rounded-lg">
       <Card
-        className={`w-full relative before:rounded-sm rounded-lg py-4 pb-2 bg-white border-black/15 border`}
+        className={`w-full relative before:rounded-sm rounded-lg py-4 pb-2 bg-white border-black/30 border shadow-lg`}
       >
         <CardHeader className="flex flex-row items-center justify-between space-y-0 border-b border-black/15 border-dashed px-4 [.border-b]:pb-4">
           <CardTitle className="text-sm font-medium">

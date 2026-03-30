@@ -9,6 +9,7 @@ import { useRandomAnimation } from "@/hooks/useRandomAnimation";
 import BagsBadge from "./BagsBadge";
 import { Button } from "@/components/ui/button";
 import NodeVisualizer from "@/components/NodeVisualizer";
+import Link from "next/link";
 
 const Header = () => {
   const clockAnimate = useRandomAnimation(500);
@@ -20,8 +21,21 @@ const Header = () => {
 
   return (
     <section className="border-b border-dashed border-black/50 text-black">
-      <Container className="flex gap-10 pt-12 flex-col pb-12 sm:pb-20 justify-center px-0!">
-        <div className="mt-5 xl:mt-20 flex flex-col items-center text-center gap-6 md:gap-8">
+      <Container className="flex gap-10 pt-0 flex-col pb-12 sm:pb-20 justify-center px-0!">
+        <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#DFE0E8_1.2px,transparent_1px)] bg-[size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_40%,transparent_100%)]"></div>
+        <div className="mt-10 xl:mt-20 flex flex-col items-center text-center gap-6 md:gap-8">
+          <Link
+            href="https://affiliate.deforge.io"
+            target="_blank"
+            className="text-xs font-medium p-1 border border-black/30 shadow-md bg-secondary/70 rounded-full px-3 flex items-center gap-2"
+            aria-hidden
+          >
+            <div className="w-2 h-2 rounded-full bg-green-500">
+              <div className="w-2 h-2 rounded-full bg-green-500 animate-ping"></div>
+            </div>
+            Refer us and earn rewards.
+          </Link>
+
           <div className="flex gap-4 items-center sm:flex-row flex-col">
             <ProductHuntBadge />
             <BagsBadge />
